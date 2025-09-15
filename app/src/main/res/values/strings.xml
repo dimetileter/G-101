@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">G-101</string>
+
+    <!--Raw-->
+    <string name="title">Title</string>
+    <string name="list_title">List Title</string>
+    <string name="header">Header</string>
+    <string name="description">Description</string>
+    <string name="label">Label</string>
+    <string name="context">Context</string>
+    <string name="user_name">User Name</string>
+    <string name="user_mail">username@gmail.com</string>
+
+    <!--System-->
+    <string name="search_here">Search here</string>
+    <string name="next">Next</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="help">Help</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="buy_me_a_coffee">Buy me a coffee</string>
+
+    <!---->
+    <string name="favorites">Favorites</string>
+    <string name="categories">Categories</string>
+    <string name="category">Category</string>">
+    <string name="favorite_clothes">Favorite Clothes</string>
+    <string name="favorites_combines">Favorites Combines</string>">
+    <string name="filter">Filter</string>
+    <string name="done">Done</string>
+    <string name="all">All</string>
+
+    <!--Onboarding-->
+    <string name="organization">Organization</string>
+    <string name="artificial_intelligence">AI</string>
+    <string name="intro1_desc">Categorize your clothes, organize them, create combinations and access the clothes you want whenever you want.</string>
+    <string name="intro2_desc">Organize your clothes by type, season, color, style, and even newness.
+Track your clothes in detail with charts.</string>
+    <string name="intro3_desc">Create unique outfit combinations using artificial intelligence. Get outfit suggestions that match your existing pieces.</string>
+
+    <!--Adding Clothes-->
+    <string name="add_clothes1_desc">Use your camera or gallery to add photos</string>
+    <string name="add_clothes2_desc">You can manually edit the image.</string>
+    <string name="add_clothes3_desc">Last few steps! Tell us a little about your outfit</string>
+    <string name="new_adding_notice">You can add a new image or move on to the next page</string>
+    <string name="choosing_notice">Select to add an image</string>
+    <string name="set_general_characteristics">Set general characteristics</string>"
+    <string name="set_tags">Set tags</string>
+    <string name="maximum_tags_notice">You can select up to 4 labels</string>
+    <string name="enter_description_title">Enter a short description</string>
+    <string name="eneter_description_here">Enter your description here</string>
+
+    <!-- Navigation Bar-->
+    <string name="home">Home</string>
+    <string name="combines">Combines</string>
+    <string name="add_clothes">Add Clothes</string>
+
+    <!--Categories-->
+    <string name="brand">Brand</string>
+    <string name="model">Model</string>
+    <string name="season">Season</string>
+    <string name="color">Color</string>
+    <string name="size">Size</string>
+    <string name="material">Material</string>
+    <string name="tags">Tags</string>
+    <string name="general_characteristics">General Characteristics</string>
+    <string name="number_of_piece">Number of piece</string>
+    <string name="theme">Theme</string>
+    <string name="ambiance">Ambiance</string>
+
+    <!--Settings-->
+    <string name="header_profile_subs_settings">Profile and Subscriptions Settings</string>
+    <string name="header_app_setting">App Settings</string>
+    <string name="user_name_title">User Name</string>
+    <string name="subscriptions_plans_title">Subscriptions Plans</string>
+    <string name="ai_access">Artificial Intelligence Access</string>
+    <string name="auto_combine_suggestions">Automatic Combine Suggestion</string>
+    <string name="limitless_storage">Limitless Storage</string>
+    <string name="multiple_device">Multiple Device Support</string>
+    <string name="add_free_interface">Add-Free Interface</string>
+    <string name="user_settings_desc">Update profile informations, edit account and more</string>
+    <string name="subs_plan_desc">Artificial intelligence, limitless storage, add-free and more</string>
+    <string name="image">image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

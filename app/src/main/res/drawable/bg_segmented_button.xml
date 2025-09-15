@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- Disabled state -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="60dp"/>
+            <solid android:color="@color/unskipable_segmented_button"/>
+        </shape>
+    </item>
+
+
+
+    <!-- Selected state -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="60dp"/>
+            <solid android:color="@color/selected_segmented_button"/>
+        </shape>
+    </item>
+
+
+    <!-- Default (unselected & enabled) state -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="60dp"/>
+            <solid android:color="@color/unselected_segmented_button"/>
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Core Colors-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_gray33">#333333</color>
+    <color name="transparent">@android:color/transparent</color>
+
+    <!--White and black-->
+    <color name="light">@color/white</color>
+    <color name="dark">@color/black</color>
+
+    <!--Theme Colors-->
+    <color name="app_theme_intense">#F8A44C</color>
+    <color name="app_theme_primary">#FFC68A</color>
+    <color name="app_theme_light">#EEDECD</color>
+    <color name="card_background">@color/white</color>
+    <color name="activity_background">#F2F2F2</color>
+    <color name="transparent_title_background_1">@color/dark_gray33</color>
+    <color name="transparent_title_background_2">#B2A6A6A6</color> <!--70%-->
+    <color name="navbar_item">@color/dark_gray33</color>
+    <color name="outline_stroke">#545456</color>
+    <color name="navbar_outline_stroke">#41545454</color> <!--25%-->
+    <color name="segmented_button_bar">#3C787880</color>
+    <color name="selected_segmented_button">@color/white</color>
+    <color name="unselected_segmented_button">@color/transparent</color>
+    <color name="unskipable_segmented_button">#19D9D9D9</color>
+
+    <!--Text colors-->
+    <color name="header_text">#9A3C3C43</color> <!--60%-->
+    <color name="description_text">#9A3C3C3C</color> <!--60%-->
+    <color name="navbar_label">@color/dark_gray33</color>
+
+    <!--Linear gradiant start colors-->
+    <color name="dress_pink">#ECB6CC</color>
+    <color name="suit_grey">#716F74</color>
+    <color name="jacket_brown">#724027</color>
+    <color name="sunglass_grey">#41413F</color>
+    <color name="accsessories_blue">#6B8FE1</color>
+    <color name="parfume_yellow">#F0D99F</color>
+    <color name="tshirt_yellow">#E6C469</color>
+    <color name="shirt_blue">#80A6CD</color>
+    <color name="shoe_orange">#F7BEB3</color>
+    <color name="sweaters_purple">#866B9A</color>
+    <color name="skirt_green">#578969</color>
+    <color name="pant_blue">#55759B</color>
+
+</resources>

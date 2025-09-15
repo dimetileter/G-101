@@ -1,0 +1,41 @@
+# Android Studio & IntelliJ
+*.iml
+.idea/
+.gradle/
+local.properties
+
+# Build outputs
+build/
+captures/
+output.json
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Google Services (koymaman önerilir)
+google-services.json
+
+# API keys & secrets
+apikey.properties
+*.jks
+*.keystore
+
+# Kotlin/Java build
+*.class
+*.dex
+*.apk
+*.ap_
+
+# Generated files
+bin/
+gen/
+
+# ProGuard
+proguard/
+
+# Android Profiling
+*.hprof

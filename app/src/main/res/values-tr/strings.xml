@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">G-101</string>
+
+    <!--Raw-->
+    <string name="title">Title</string>
+    <string name="list_title">List Title</string>
+    <string name="header">Header</string>
+    <string name="description">Description</string>
+    <string name="label">Label</string>
+    <string name="context">Context</string>
+    <string name="user_name">User Name</string>
+    <string name="user_mail">username@gmail.com</string>
+
+    <!--System-->
+    <string name="search_here">Arayın</string>
+    <string name="next">Sonraki</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="settings">Ayarlar</string>
+    <string name="language">Dil</string>
+    <string name="help">Yardım</string>
+    <string name="send_feedback">Geri Bildirim Gönder</string>
+    <string name="buy_me_a_coffee">Bize Kahve Ismarlayın</string>
+
+    <!---->
+    <string name="favorites">Favoriler</string>
+    <string name="categories">Kategoriler</string>
+    <string name="category">Kategori</string>">
+    <string name="favorite_clothes">Favori Kıyafetler</string>
+    <string name="favorites_combines">Favori Kombinler</string>">
+    <string name="filter">Filitre</string>
+    <string name="done">Bitti</string>
+    <string name="all">Tümü</string>
+
+    <!--Onboarding-->
+    <string name="organization">Organizasyon</string>
+    <string name="artificial_intelligence">Yapay Zeka</string>
+    <string name="intro1_desc">Kıyafetlerinizi kategorilere ayrın, organize edin, kombinler oluşturun ve dilediğiniz zaman  istediğiniz kıyafete ulaşın</string>
+    <string name="intro2_desc">Kıyafetlerinizi türüne, mevsimine, rengine, stiline ve hatta yeniliğine göre organize edin.
+Kıyafetlerinizi grafikler ile detaylıca takip edin</string>
+    <string name="intro3_desc">Yapay zekayı kullanarak kendi kıyafetleriniz
+ile özgün kombinler oluşturun. Elinizdeki parçalara uygun olabilecek kıyafet önerileri alın</string>
+
+    <!--Adding Clothes-->
+    <string name="add_clothes1_desc">Fotoğraf eklemek için kamerayı ya da galerinizi kullanın</string>
+    <string name="add_clothes2_desc">Resim üzerinde manuel düzenleme yapablirsiniz</string>
+    <string name="add_clothes3_desc">Son birkaç adım! Kıyafetiniz hakkında biraz bilgi verin</string>
+    <string name="new_adding_notice">Yeniden resim ekleyebilir ya da sonraki sayfaya geçebilirsiniz</string>
+    <string name="choosing_notice">Resim eklemek için seçim yapın</string>
+    <string name="set_general_characteristics">Genel özellikleri ayarlayın</string>"
+    <string name="set_tags">Etiketleri ayarlayın</string>
+    <string name="maximum_tags_notice">En fazla 4 adet seçebilirsiniz</string>
+    <string name="enter_description_title">Kısa bir açıklama girin</string>
+    <string name="eneter_description_here">Açıklamanızı buraya girin</string>
+
+    <!-- Navigation Bar-->
+    <string name="home">Ana Sayfa</string>
+    <string name="combines">Kombinler</string>
+    <string name="add_clothes">Kıyafet Ekle</string>
+
+    <!--Categories-->
+    <string name="brand">Marka</string>
+    <string name="model">Model</string>
+    <string name="season">Sezon</string>
+    <string name="color">Renk</string>
+    <string name="size">Beden</string>
+    <string name="material">Meteryal</string>
+    <string name="tags">Etiketler</string>
+    <string name="general_characteristics">Genel Özellikler</string>">
+    <string name="number_of_piece">Parça sayısı</string>
+    <string name="theme">Tema</string>
+    <string name="ambiance">Ortam</string>
+
+    <!--Settings-->
+    <string name="header_profile_subs_settings">Profil ve Abonelik Ayarları</string>
+    <string name="header_app_setting">Uygulama Ayarları</string>
+    <string name="user_name_title">Kullanıcı Adı</string>
+    <string name="subscriptions_plans_title">Abonelik Planları</string>
+    <string name="ai_access">Yapay Zeka Erişimi</string>
+    <string name="auto_combine_suggestions">Otomatik Kombin Önerisi</string>
+    <string name="limitless_storage">Sınırsz Depolama</string>
+    <string name="multiple_device">Çoklu Cihaz Desteği</string>
+    <string name="add_free_interface">Reklamsız Arayğz</string>
+    <string name="user_settings_desc">Hesap bilgilerini güncelle, hesabı düzenle ve dahası</string>
+    <string name="subs_plan_desc">Yapay zeka, sınırsız depolama, reklamsız erişim ve dahası</string>
+    <string name="image">resim</string>
+
+</resources>

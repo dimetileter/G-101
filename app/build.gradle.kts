@@ -56,6 +56,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // Material Design
+    implementation("com.google.android.material:material:1.13.0")
+
     // BlurView
     implementation("com.github.Dimezis:BlurView:version-3.1.0")
 

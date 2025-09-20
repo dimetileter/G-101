@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Onboarding card style -->
-    <style name="G101.Cards.OnboardingCards" parent="">
+    <!--
+        CARD STYLES
+
+         - Onboarding Cards
+         - NavigationBar Cards
+         - List Cards
+         - Dropdown List Cards
+     -->
+
+    <!-- Main Card -->
+    <style name="G101.Cards" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="elevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- Onboarding Cards -->
+    <style name="G101.Cards.OnboardingCards" parent="G101.Cards">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">0dp</item>
         <item name="cornerSizeTopRight">0dp</item>
         <item name="cornerSizeBottomLeft">40dp</item>
         <item name="cornerSizeBottomRight">40dp</item>
     </style>
+
+    <!-- NavigationBar Cards -->
+    <style name="G101.Cards.NavigationBarCard" parent="G101.Cards">
+        <item name="cardCornerRadius">60dp</item>
+        <item name="cardBackgroundColor">@color/transparent</item>
+        <item name="strokeWidth">1.3dp</item>
+        <item name="strokeColor">@color/navbar_outline_stroke</item>
+
+        <!--
+        <item name="cardBackgroundColor">@color/transparent</item>
+        -->
+    </style>
+
 
     <!--
         TEXT STYLES
@@ -79,8 +108,32 @@
         <item name="android:textColor">@color/navbar_label</item>
         <item name="android:textSize">12sp</item>
     </style>
+    
 
+    <!--
+        NAVIGATION BAR
 
+        - Navigation Bar
+        - Navigation Bar Active Indicator
+   -->
+
+    <!-- Navigation Bar -->
+    <style name="G101.BottomNavigationBar" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:minHeight">64dp</item>
+        <item name="itemPaddingTop">6dp</item>
+        <item name="itemPaddingBottom">6dp</item>
+        <item name="elevation">0dp</item>
+        <item name="itemIconTint">@color/navbar_ic_color_state</item>
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="itemTextAppearanceActiveBoldEnabled">false</item>
+        <item name="itemActiveIndicatorStyle">@style/G101.BottomNavigationBar.ActiveIndicatorStyle</item>
+    </style>
+
+    <!-- Active Indıcator-->
+    <style name="G101.BottomNavigationBar.ActiveIndicatorStyle" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/app_theme_primary</item>
+    </style>
+    
     <!--
         XXXX
         -

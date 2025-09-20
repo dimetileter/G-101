@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Eğer kombin sayfası seçili ise navbar ikonunu dolu yap -->
+    <item android:drawable="@drawable/ic_filled_combine" android:state_checked="true"/>
+
+    <!-- Eğer kombin sayfası seçili değilse ikonu boş yap -->
+    <item android:drawable="@drawable/ic_combine"/>
+
+</selector>

@@ -20,6 +20,7 @@
     <color name="transparent_title_background_1">@color/dark_gray33</color>
     <color name="transparent_title_background_2">#B2A6A6A6</color> <!--70%-->
     <color name="navbar_item">@color/dark_gray33</color>
+    <color name="navbar_item_selected">@color/dark_gray33</color>
     <color name="outline_stroke">#545456</color>
     <color name="navbar_outline_stroke">#41545454</color> <!--25%-->
     <color name="segmented_button_bar">#3C787880</color>

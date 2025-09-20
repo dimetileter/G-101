@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Eğer item seçili ise icon rengini gri33 yap-->
+    <item android:color="@color/navbar_item_selected" android:state_selected="true"/>
+    <!-- Eğer item seçili değilse temaya göre renk ayarla -->
+    <item android:color="@color/navbar_item"/>
+</selector>

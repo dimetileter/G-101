@@ -1,19 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/activity_background"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".ui.main.home.HomePageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME FRAGMENT"
-        android:textSize="48sp"/>
+    <!-- Blur Target -->
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/blur_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="64dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/app_theme_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/dress_pink"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/navbar_label"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/pant_blue"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/skirt_green"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#3B125F"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/material_dynamic_tertiary30"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/material_dynamic_neutral_variant80"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/shoe_orange"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/navbar_item_selected"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@android:color/holo_blue_light"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/design_default_color_error"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@android:color/holo_green_light"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Listeler ve içerik buraya -->
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </eightbitlab.com.blurview.BlurTarget>
+
+    <!-- Blur View -->
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blur_view_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:blurOverlayColor="@color/blurview_overlay_color">
+
+        <!-- AppBar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="4dp"
+                android:background="@drawable/bg_appbar_gradiant">
+
+                <ImageView
+                    android:id="@+id/weather_animation_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/weather"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <Space
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp">
+
+                    <!-- Title -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/weather_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="start|center_vertical"
+                        android:text="34°C"
+                        android:textSize="22sp" />
+
+                    <!-- Weather Statu Title -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/weather_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start|center_vertical"
+                        android:text="Parçalı bulutlu"
+                        android:textColor="@color/dark" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent" />
+
+                <!-- Icon Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:icon="@drawable/ic_account_circle"
+                    app:iconTint="@color/dark"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="4dp"
+                    style="@style/Widget.Material3.Button.IconButton"/>
+
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+    </eightbitlab.com.blurview.BlurView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

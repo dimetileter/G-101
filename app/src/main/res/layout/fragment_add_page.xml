@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/activity_background"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".ui.main.add.AddPageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- İçerik -->
+
+    <!-- Appbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ADD FRAGMENT"
-        android:textSize="48sp"/>
+        android:minHeight="64dp"
+        style="@style/G101.Appbar.Titled"
+        android:background="@color/blurview_overlay_color"
+        app:title="@string/add_clothes">
+
+        <!-- Icon Button -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_account_circle"
+            app:iconTint="@color/dark"
+            android:layout_gravity="end"
+            android:layout_marginEnd="4dp"
+            style="@style/Widget.Material3.Button.IconButton"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
 </LinearLayout>

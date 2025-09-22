@@ -2,6 +2,7 @@
 <resources>
 
     <!--White and black-->
+    <color name="blurview_overlay_color">#993A3A3A</color>
     <color name="light">@color/black</color>
     <color name="dark">@color/white</color>
 

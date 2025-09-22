@@ -22,6 +22,8 @@
     <string name="help">Yardım</string>
     <string name="send_feedback">Geri Bildirim Gönder</string>
     <string name="buy_me_a_coffee">Bize Kahve Ismarlayın</string>
+    <string name="weather">Hava durumu</string>
+    <string name="profile_settings">Profil ayarları</string>"
 
     <!---->
     <string name="favorites">Favoriler</string>

@@ -12,7 +12,6 @@
     </item>
 
 
-
     <!-- Selected state -->
     <item android:state_selected="true">
         <shape android:shape="rectangle">

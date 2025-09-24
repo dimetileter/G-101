@@ -5,8 +5,10 @@
     <color name="white">#FFFFFF</color>
     <color name="blurview_overlay_color">#80FFFFFF</color>
     <color name="white_op30">#4DFFFFFF</color>
+    <color name="white_op70">#B3FFFFFF</color>
     <color name="black">#000000</color>
     <color name="dark_gray33">#333333</color>
+    <color name="dark_gray33_op60">#993C3C3C</color>
     <color name="transparent">@android:color/transparent</color>
 
     <!--White and black-->
@@ -21,8 +23,7 @@
     <color name="app_theme_light">#EEDECD</color>
     <color name="card_background">@color/white</color>
     <color name="activity_background">#F2F2F2</color>
-    <color name="transparent_title_background_1">@color/dark_gray33</color>
-    <color name="transparent_title_background_2">#B2A6A6A6</color> <!--70%-->
+    <color name="transparent_title_background">@color/white_op70</color> <!--70%-->
     <color name="navbar_item">@color/dark_gray33</color>
     <color name="navbar_item_selected">@color/dark_gray33</color>
     <color name="outline_stroke">#545456</color>
@@ -41,9 +42,9 @@
     <color name="dress_pink">#ECB6CC</color>
     <color name="suit_grey">#716F74</color>
     <color name="jacket_brown">#724027</color>
-    <color name="sunglass_grey">#41413F</color>
-    <color name="accsessories_blue">#6B8FE1</color>
-    <color name="parfume_yellow">#F0D99F</color>
+    <color name="glasses_grey">#41413F</color>
+    <color name="accessories_blue">#6B8FE1</color>
+    <color name="perfume_yellow">#F0D99F</color>
     <color name="tshirt_yellow">#E6C469</color>
     <color name="shirt_blue">#80A6CD</color>
     <color name="shoe_orange">#F7BEB3</color>

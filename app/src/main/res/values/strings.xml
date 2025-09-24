@@ -33,7 +33,7 @@
     <string name="filter">Filter</string>
     <string name="done">Done</string>
     <string name="all">All</string>
-    <string name="weather">Weather</string>
+    <string name="weather">Partly cloudy</string>
 
     <!--Onboarding-->
     <string name="organization">Organization</string>
@@ -73,6 +73,21 @@ Track your clothes in detail with charts.</string>
     <string name="theme">Theme</string>
     <string name="ambiance">Ambiance</string>
 
+    <string name="tshirt">T-Shirt</string>
+    <string name="jacket">Jacket</string>"
+    <string name="dress">Dress</string>
+    <string name="accessories">Accessories</string>"
+    <string name="skirt">Skirt</string>
+    <string name="suit">Suit</string>
+    <string name="glasses">Glasses</string>
+    <string name="perfume">Perfume</string>
+    <string name="shirt">Shirt</string>
+    <string name="shoe">Shoe</string>
+    <string name="sweater">Sweater</string>
+    <string name="pant">Pant</string>
+    <string name="view_your_clothes">View your clothes</string>
+
+
     <!--Settings-->
     <string name="header_profile_subs_settings">Profile and Subscriptions Settings</string>
     <string name="header_app_setting">App Settings</string>
@@ -86,6 +101,7 @@ Track your clothes in detail with charts.</string>
     <string name="user_settings_desc">Update profile informations, edit account and more</string>
     <string name="subs_plan_desc">Artificial intelligence, limitless storage, add-free and more</string>
     <string name="image">image</string>
+    <string name="_34_c" translatable="false">34°C</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

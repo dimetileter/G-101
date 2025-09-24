@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:minWidth="117dp"
+    android:minHeight="120dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:layout_marginStart="7dp"
+    android:layout_marginEnd="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+    app:cardBackgroundColor="@color/card_background"
+    style="@style/G101.Cards"
+    app:cardElevation="2dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_favorite_shortcut_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/card_favorite_shortcut_image"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:contentDescription="@string/dress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_favorite_shortcut_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_favorite_shortcut_image"
+            style="@style/G101.Text.Regular_Text"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@color/transparent_title_background"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -8,6 +8,7 @@
          - NavigationBar Cards
          - List Cards
          - Dropdown List Cards
+         - Banners
      -->
 
     <!-- Main Card -->
@@ -32,12 +33,24 @@
         <item name="cardBackgroundColor">@color/transparent</item>
         <item name="strokeWidth">1.3dp</item>
         <item name="strokeColor">@color/navbar_outline_stroke</item>
-
-        <!--
-        <item name="cardBackgroundColor">@color/transparent</item>
-        -->
     </style>
 
+    <!-- Categories Cards -->
+    <style name="G101.Cards.CategoriesCard" parent="G101.Cards">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="strokeColor">@color/outline_stroke</item>
+        <item name="strokeWidth">0.3dp</item>
+        <item name="android:checkable">true</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+    </style>
+
+
+    <!-- Banners -->
+    <style name="G101.Cards.Banner" parent="G101.Cards">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
+    </style>
 
     <!--
         TEXT STYLES
@@ -92,6 +105,7 @@
         <item name="android:textColor">@color/dark</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <!--Description Title-->
@@ -100,6 +114,7 @@
         <item name="android:textColor">@color/description_text</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <!--NavBar Text-->
@@ -159,7 +174,36 @@
     </style>
 
 
-    
+    <!--
+        SEARCH BAR
+        - Multiple Search Bar Left Icon
+    -->
+
+    <style name="G101.Searchbar" parent="Widget.Material3.SearchBar">
+        <item name="android:hint">@string/search_here</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:outlineSpotShadowColor">@color/black</item>
+        <item name="hintTextColor">@color/header_text</item>
+        <item name="android:textColor">@color/dark</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="backgroundTint">@color/card_background</item>
+        <item name="android:textAppearance">@style/G101.Searchbar</item>
+    </style>
+
+    <!-- Mulitple Searchbar Text Appearance -->
+    <style name="G101.Searchbar.TextAppearance" parent="TextAppearance.Material3.SearchBar">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--
+        CARDS
+         - Banners
+         -
+         -
+         -
+    -->
+
     <!--
         XXXX
         -

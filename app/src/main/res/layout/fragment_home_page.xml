@@ -19,99 +19,127 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Scroll -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
+            android:paddingTop="64dp"
             android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingTop="64dp">
+                android:gravity="center_horizontal">
 
-                <androidx.cardview.widget.CardView
+                <!-- Search Bar -->
+                <include layout="@layout/search_bar_left"/>
+
+                <!-- Banner ViewPager2 -->
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/app_theme_primary"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    android:src="@drawable/banner_ai"/>
 
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/dress_pink"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    android:src="@drawable/banner_ad_mob"/>
 
-                <androidx.cardview.widget.CardView
+                <!-- Favorites Title -->
+                <LinearLayout
+                    android:id="@+id/btn_favorites_tab"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/navbar_label"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingEnd="4dp"
+                    android:tooltipText="@string/favorites">
 
-                <androidx.cardview.widget.CardView
+                    <!-- Favorite title -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        style="@style/G101.Text.Second_Title"
+                        android:text="@string/favorites"
+                        android:layout_weight="1"/>
+
+                    <!-- Go Page Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_edit_favorites"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        app:icon="@drawable/ic_edit"
+                        app:iconSize="24dp"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        app:iconTint="@color/dark" />
+
+                </LinearLayout>
+                <!-- Favorieler Buraya -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_shortcuts"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/pant_blue"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_height="wrap_content"
+                    android:paddingStart="9dp"
+                    android:paddingEnd="9dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"/>
 
-                <androidx.cardview.widget.CardView
+                <!-- Categories Title -->
+                <LinearLayout
+                    android:id="@+id/btn_categories"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/skirt_green"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingEnd="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:tooltipText="@string/categories">
 
-                <androidx.cardview.widget.CardView
+                    <!-- Favorite title -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        style="@style/G101.Text.Second_Title"
+                        android:text="@string/categories"
+                        android:layout_weight="1"/>
+
+                    <!-- Go Page Icon -->
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_right_arrow"
+                        android:background="@color/transparent"
+                        android:scaleType="centerInside"/>
+
+                </LinearLayout>
+
+                <!-- RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_list"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="#3B125F"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/material_dynamic_tertiary30"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral_variant80"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/shoe_orange"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/navbar_item_selected"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@android:color/holo_blue_light"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/design_default_color_error"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@android:color/holo_green_light"
-                    android:layout_marginBottom="16dp"/>
-
-                <!-- Listeler ve içerik buraya -->
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:paddingBottom="84dp" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
@@ -170,22 +198,23 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/weather_degree"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/lato_bold"
                         android:gravity="start|center_vertical"
-                        android:text="34°C"
-                        android:textSize="22sp" />
+                        android:text="@string/_34_c"
+                        android:textSize="22sp"
+                        android:textColor="@color/dark"/>
 
                     <!-- Weather Statu Title -->
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/weather_status"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/lato_regular"
                         android:gravity="start|center_vertical"
-                        android:text="Parçalı bulutlu"
+                        android:text="@string/weather"
                         android:textColor="@color/dark" />
                 </LinearLayout>
 

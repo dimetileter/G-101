@@ -22,7 +22,7 @@
     <string name="help">Yardım</string>
     <string name="send_feedback">Geri Bildirim Gönder</string>
     <string name="buy_me_a_coffee">Bize Kahve Ismarlayın</string>
-    <string name="weather">Hava durumu</string>
+    <string name="weather">Parçalı bulutlu</string>
     <string name="profile_settings">Profil ayarları</string>"
 
     <!---->
@@ -73,6 +73,20 @@ ile özgün kombinler oluşturun. Elinizdeki parçalara uygun olabilecek kıyafe
     <string name="number_of_piece">Parça sayısı</string>
     <string name="theme">Tema</string>
     <string name="ambiance">Ortam</string>
+
+    <string name="tshirt">Tişört</string>
+    <string name="jacket">Ceket</string>"
+    <string name="dress">Elbise</string>
+    <string name="accessories">Aksesuar</string>"
+    <string name="skirt">Etek</string>
+    <string name="suit">Takım Elbise</string>
+    <string name="glasses">Gözlükler</string>
+    <string name="perfume">Parfüm</string>
+    <string name="shirt">Gömlek</string>
+    <string name="shoe">Ayakkabı</string>
+    <string name="sweater">Kazak</string>
+    <string name="pant">Pantolon</string>
+    <string name="view_your_clothes">Kıyafetlerinizi görüntüleyin</string>
 
     <!--Settings-->
     <string name="header_profile_subs_settings">Profil ve Abonelik Ayarları</string>

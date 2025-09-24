@@ -12,8 +12,7 @@
     <color name="app_theme_light">#EEDECD</color>
     <color name="card_background">#1C1C1E</color>
     <color name="activity_background">@color/black</color>
-    <color name="transparent_title_background_1">#9C9C9C</color>
-    <color name="transparent_title_background_2">#B2252525</color> <!--70%-->
+    <color name="transparent_title_background">#B3000000</color> <!--70%-->
     <color name="navbar_item">#C3C3C3</color>
     <color name="selected_segmented_button">#636363</color>
     <color name="navbar_outline_stroke">#80FFFFFF</color> <!--50%-->

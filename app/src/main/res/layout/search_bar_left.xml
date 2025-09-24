@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/multiple_search_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/card_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_search"
+            android:elevation="4dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+        
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/search_bar"
+            style="@style/G101.Searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            app:hideNavigationIcon="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

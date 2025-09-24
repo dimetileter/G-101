@@ -1,4 +1,4 @@
-package com.aliosman.g101.adapter
+package com.aliosman.g101.adapter.viewPagerAdapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

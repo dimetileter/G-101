@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/activity_background"
+    tools:context=".ui.categories.CategoriesPageActivity">
+
+    <!-- Blur Target -->
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/blur_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="64dp">
+
+        <!-- Scroll View -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal">
+
+                <!-- Filter bar will be added -->
+
+
+                <!-- Ad Banner -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    android:src="@drawable/banner_ad_mob"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="16dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </eightbitlab.com.blurview.BlurTarget>
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blur_view_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:blurOverlayColor="@color/blurview_overlay_color">
+
+        <!-- Appbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                app:navigationIcon="@drawable/ic_left_arrow"
+                app:menu="@menu/appbar_btn_categories_appbar_help">
+
+                <com.google.android.material.button.MaterialSplitButton
+                    android:id="@+id/split_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/split_button_title"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoe"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:icon="@drawable/ic_search"
+                        android:textColor="@color/dark"
+                        />
+
+                    <Button
+                        android:id="@+id/split_button_menu"
+                        style="?attr/materialIconButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/shoe"
+                        app:icon="@drawable/m3_split_button_chevron_avd"
+                        />
+                </com.google.android.material.button.MaterialSplitButton>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </eightbitlab.com.blurview.BlurView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

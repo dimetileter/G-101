@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- T-shirt -->
+    <item
+        android:id="@+id/action_t_shirt"
+        android:title="@string/tshirt"
+        android:icon="@drawable/ic_tshirt"/>
+
+    <!-- Jacket -->
+    <item
+        android:id="@+id/action_jacket"
+        android:title="@string/jacket"
+        android:icon="@drawable/ic_jacket"/>
+
+    <!-- Dress -->
+    <item
+        android:id="@+id/action_dress"
+        android:title="@string/dress"
+        android:icon="@drawable/ic_dress"/>
+
+    <!-- Accessories -->
+    <item
+        android:id="@+id/action_accessories"
+        android:title="@string/accessories"
+        android:icon="@drawable/ic_accessories"/>
+
+    <!-- Skirt -->
+    <item
+        android:id="@+id/action_skirt"
+        android:title="@string/skirt"
+        android:icon="@drawable/ic_skirt"/>
+
+    <!-- Suit -->
+    <item
+        android:id="@+id/action_suit"
+        android:title="@string/suit"
+        android:icon="@drawable/ic_suit"/>
+
+    <!-- Glasses -->
+    <item
+        android:id="@+id/action_glasses"
+        android:title="@string/glasses"
+        android:icon="@drawable/ic_eyeglasses"/>
+
+    <!-- Perfume -->
+    <item
+        android:id="@+id/action_perfume"
+        android:title="@string/perfume"
+        android:icon="@drawable/ic_perfume"/>
+
+    <!-- Shirt -->
+    <item
+        android:id="@+id/action_shirt"
+        android:title="@string/shirt"
+        android:icon="@drawable/ic_shirt"/>
+
+    <!-- Shoe -->
+    <item
+        android:id="@+id/action_shoe"
+        android:title="@string/shoe"
+        android:icon="@drawable/ic_shoe"/>
+
+    <!-- Sweater -->
+    <item
+        android:id="@+id/action_sweater"
+        android:title="@string/sweater"
+        android:icon="@drawable/ic_sweater"/>
+
+    <!-- Pant -->
+    <item
+        android:id="@+id/action_pant"
+        android:title="@string/pant"
+        android:icon="@drawable/ic_pant"/>
+</menu>

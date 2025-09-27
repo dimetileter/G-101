@@ -1,12 +1,12 @@
-package com.aliosman.g101.adapter.recyclerAdapter.homePageRecyclerAdapter
+package com.aliosman.g101.ui.main.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.aliosman.g101.databinding.CardMainCategoryCardBinding
 
-class HomePageCategoriesRecyclerAdapter(private val items: List<HomePageCategoriesData>):
-    RecyclerView.Adapter<HomePageCategoriesRecyclerAdapter.ViewHolder>() {
+internal class CategoriesRecyclerAdapter(private val items: List<CategoriesRecyclerData>):
+    RecyclerView.Adapter<CategoriesRecyclerAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: CardMainCategoryCardBinding): RecyclerView.ViewHolder(binding.root)
 

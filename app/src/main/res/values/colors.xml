@@ -32,6 +32,7 @@
     <color name="selected_segmented_button">@color/white</color>
     <color name="unselected_segmented_button">@color/transparent</color>
     <color name="unskipable_segmented_button">#19D9D9D9</color>
+    <color name="favorite_heart_red">#C62424</color>
 
     <!--Text colors-->
     <color name="header_text">#9A3C3C43</color> <!--60%-->

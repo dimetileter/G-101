@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    tools:context=".ui.categories.CategoriesDetailPage">
+
+    <!-- Blur Target -->
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/blur_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- İçerik -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:paddingTop="64dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Product image and group button -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/img_product_image"
+                        android:layout_width="224dp"
+                        android:layout_height="224dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:scaleType="center"
+                        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Title and Description bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <!-- Brand -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Title -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.List_Title"
+                            android:text="@string/brand"
+                            android:textAlignment="center"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_brand_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.Light_Text"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:text="Exmp:Nike"/>
+
+                    </LinearLayout>
+
+                    <!-- Model -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Title -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.List_Title"
+                            android:text="@string/model"
+                            android:textAlignment="center"/>
+
+                        <!-- Detail Text -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_model_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.Light_Text"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:text="Exmp:Spor"/>
+
+                    </LinearLayout>
+
+                    <!-- Season -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Title -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.List_Title"
+                            android:text="@string/season"
+                            android:textAlignment="center"/>
+
+                        <!-- Detail Text -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_season_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.Light_Text"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:text="Exmp:Spring"/>
+
+                    </LinearLayout>
+
+                    <!-- Category -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Title -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.List_Title"
+                            android:text="@string/category"
+                            android:textAlignment="center"/>
+
+                        <!-- Detail Text -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_category_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/G101.Text.Light_Text"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:text="Exmp:Shoe"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Divider -->
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    app:dividerColor="@color/outline_stroke"/>
+
+                <!-- General Characteristics -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    style="@style/G101.Text.Header"
+                    android:text="@string/general_characteristics" />
+
+                <!-- Tags -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    style="@style/G101.Text.Header"
+                    android:text="@string/tags" />
+
+                <!-- Description -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    style="@style/G101.Text.Header"
+                    android:text="@string/description" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </eightbitlab.com.blurview.BlurTarget>
+
+    <!-- Blur View -->
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:blurOverlayColor="@color/blurview_overlay_color">
+
+        <!-- Toolbar -->
+    </eightbitlab.com.blurview.BlurView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        style="@style/G101.Appbar.Titled"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp"
+        app:layout_anchor="@+id/blurView"
+        app:layout_anchorGravity="center"
+        app:menu="@menu/app_bar_delete_buton"
+        app:navigationIcon="@drawable/ic_left_arrow">
+
+        <!-- Title -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_clothing_name"
+            style="@style/G101.Text.Second_Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

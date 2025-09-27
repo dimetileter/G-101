@@ -14,17 +14,23 @@
         android:theme="@style/Theme.G101"
         tools:targetApi="33">
         <activity
+            android:name=".ui.categories.CategoriesDetailPage"
+            android:exported="false" />
+        <activity
+            android:name=".ui.categories.CategoriesPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.onBoarding.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
+
 </manifest>

@@ -6,7 +6,7 @@
     <string name="title">Title</string>
     <string name="list_title">List Title</string>
     <string name="header">Header</string>
-    <string name="description">Description</string>
+    <string name="description">Açıklama</string>
     <string name="label">Label</string>
     <string name="context">Context</string>
     <string name="user_name">User Name</string>
@@ -101,5 +101,6 @@ ile özgün kombinler oluşturun. Elinizdeki parçalara uygun olabilecek kıyafe
     <string name="user_settings_desc">Hesap bilgilerini güncelle, hesabı düzenle ve dahası</string>
     <string name="subs_plan_desc">Yapay zeka, sınırsız depolama, reklamsız erişim ve dahası</string>
     <string name="image">resim</string>
+    <string name="delete">Sil</string>
 
 </resources>

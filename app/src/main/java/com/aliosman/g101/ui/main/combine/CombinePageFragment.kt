@@ -42,7 +42,7 @@ class CombinePageFragment : Fragment() {
 
     // BlurView Effect
     private fun setBlurView() {
-        val radius = 25f
+        val radius = 20f
         val decorView = requireActivity().window.decorView
         val blurTarget = binding.blurTarget
 

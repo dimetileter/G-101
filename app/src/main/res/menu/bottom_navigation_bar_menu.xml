@@ -3,19 +3,19 @@
     <item
         android:id="@+id/home_page"
         android:enabled="true"
-        android:icon="@drawable/navbar_ic_home"
+        android:icon="@drawable/state_navbar_ic_home"
         android:tooltipText="@string/home"
         android:title="@string/home"/>
     <item
         android:id="@+id/combine_page"
         android:enabled="true"
-        android:icon="@drawable/navbar_ic_combine"
+        android:icon="@drawable/state_navbar_ic_combine"
         android:tooltipText="@string/combines"
         android:title="@string/combines"/>
     <item
         android:id="@+id/favorite_page"
         android:enabled="true"
-        android:icon="@drawable/navbar_ic_favorite"
+        android:icon="@drawable/state_navbar_ic_favorite"
         android:tooltipText="@string/favorites"
         android:iconTint="@color/navbar_item"
         android:title="@string/favorites"/>

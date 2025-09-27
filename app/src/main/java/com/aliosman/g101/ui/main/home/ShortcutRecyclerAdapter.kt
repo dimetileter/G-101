@@ -1,28 +1,26 @@
-package com.aliosman.g101.adapter.recyclerAdapter.homePageRecyclerAdapter
+package com.aliosman.g101.ui.main.home
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.aliosman.g101.databinding.CardFavoriteShortcutBinding
 
-class HomePageShortcutRecyclerAdapter(private val shortcutsList: List<HomePageFavoriteShortcut>) :
-    RecyclerView.Adapter<HomePageShortcutRecyclerAdapter.ShortcutsViewHolder>() {
+internal class ShortcutRecyclerAdapter(private val shortcutsList: List<FavoriteShortcutData>) :
+    RecyclerView.Adapter<ShortcutRecyclerAdapter.ShortcutsViewHolder>() {
 
     class ShortcutsViewHolder(val binding: CardFavoriteShortcutBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
     parent: ViewGroup,
     viewType: Int
-    ): HomePageShortcutRecyclerAdapter.ShortcutsViewHolder {
+    ): ShortcutsViewHolder {
         val binding = CardFavoriteShortcutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ShortcutsViewHolder(binding)
     }
 
     override fun onBindViewHolder(
-        holder: HomePageShortcutRecyclerAdapter.ShortcutsViewHolder,
+        holder: ShortcutsViewHolder,
         position: Int
     ) {
         val item = shortcutsList[position]

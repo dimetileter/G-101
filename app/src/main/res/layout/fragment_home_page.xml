@@ -160,10 +160,7 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:backgroundTint="@color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -224,6 +221,7 @@
 
                 <!-- Icon Button -->
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_account"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     app:icon="@drawable/ic_account_circle"

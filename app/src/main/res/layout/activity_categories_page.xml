@@ -28,8 +28,98 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_horizontal">
 
-                <!-- Filter bar will be added -->
+                <!-- Filter bar -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
+                    <!-- Chip group -->
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        android:paddingStart="16dp"
+                        tools:ignore="RtlSymmetry"
+                        app:singleLine="true"
+                        app:singleSelection="false"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        app:chipSpacing="8dp">
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            app:chipIconEnabled="true"
+                            app:chipIconTint="@color/dark"
+                            app:checkedIconEnabled="false"
+                            app:chipIconVisible="true"
+                            app:chipIcon="@drawable/state_categories_popmenu_button"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kış"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaz"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sonbahar"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İlkbahar"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Marka"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/Widget.Material3.Chip.Filter"/>
+                        
+                    </com.google.android.material.chip.ChipGroup>
+                </HorizontalScrollView>
 
                 <!-- Ad Banner -->
                 <com.google.android.material.imageview.ShapeableImageView
@@ -72,33 +162,34 @@
                 app:navigationIcon="@drawable/ic_left_arrow"
                 app:menu="@menu/appbar_btn_categories_appbar_help">
 
-                <com.google.android.material.button.MaterialSplitButton
-                    android:id="@+id/split_button"
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ic_category_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shoe"
+                    android:scaleType="center"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_category_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_height="48dp"
+                    style="@style/G101.Text.Second_Title"
+                    android:text="Ayakkabı"
+                    android:layout_gravity="center" />
 
-                    <Button
-                        android:id="@+id/split_button_title"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/shoe"
-                        android:clickable="false"
-                        android:focusable="false"
-                        app:icon="@drawable/ic_search"
-                        android:textColor="@color/dark"
-                        />
-
-                    <Button
-                        android:id="@+id/split_button_menu"
-                        style="?attr/materialIconButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/shoe"
-                        app:icon="@drawable/m3_split_button_chevron_avd"
-                        />
-                </com.google.android.material.button.MaterialSplitButton>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btn_pop_menu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    android:src="@drawable/state_categories_popmenu_button"
+                    android:scaleType="center"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraSmall"
+                    android:layout_gravity="center" />
 
             </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>

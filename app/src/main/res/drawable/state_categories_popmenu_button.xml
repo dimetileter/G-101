@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Butona basıldığında -->
+    <item android:drawable="@drawable/ic_keyboard_arrow_up" android:state_selected="true"/>
+
+    <!-- Butona tıklanmadığında ve default iken -->
+    <item android:drawable="@drawable/ic_keyboard_arrow_down"/>
+</selector>

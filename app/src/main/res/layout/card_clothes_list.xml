@@ -9,6 +9,9 @@
     android:paddingEnd="4dp"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     android:background="@drawable/bg_clothes_list"
     android:gravity="center_vertical">
 

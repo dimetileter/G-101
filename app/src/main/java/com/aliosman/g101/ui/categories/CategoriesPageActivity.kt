@@ -49,17 +49,18 @@ class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickLis
         }
 
         // Split button actions
-        val splitButtonMenu = binding.splitButtonMenu
+        val splitButtonMenu = binding.btnPopMenu
         splitButtonMenu.setOnClickListener {
+            splitButtonMenu.isSelected = true
             showPopupMenu()
         }
 
         // Pop menu initialization and listeners
-        popupMenu = PopupMenu(this, binding.splitButtonMenu)
+        popupMenu = PopupMenu(this, binding.btnPopMenu)
         popupMenu.setOnMenuItemClickListener(this)
         popupMenu.setOnDismissListener {
-            splitButtonMenu.isPressed = true
-            Toast.makeText(this, "Pop-up closed", Toast.LENGTH_SHORT).show()
+            // If menu disabled then change button's icon state situation
+            splitButtonMenu.isSelected = false
         }
 
         //popup menu
@@ -70,7 +71,6 @@ class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickLis
             field.isAccessible = true
             val menuPopupHelper = field.get(popupMenu)
 
-            // mPopup'ın türü MenuPopupHelper'dır. Bu sınıf içinde ikonları göstermeyi sağlayan metodu reflection ile çağırıyoruz.
             val setForceShowIcon = menuPopupHelper.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.javaPrimitiveType)
             setForceShowIcon.invoke(menuPopupHelper, true)
 
@@ -115,19 +115,68 @@ class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickLis
 
     // Menu click listener
     override fun onMenuItemClick(item: MenuItem?): Boolean {
+        val title = binding.txtCategoryText
+        val icon = binding.icCategoryIcon
         when(item?.itemId) {
-            R.id.action_t_shirt -> {binding.splitButtonTitle.setText(R.string.tshirt)}
-            R.id.action_jacket -> {binding.splitButtonTitle.setText(R.string.jacket)}
-            R.id.action_dress -> {binding.splitButtonTitle.setText(R.string.dress)}
-            R.id.action_accessories -> {binding.splitButtonTitle.setText(R.string.accessories)}
-            R.id.action_skirt -> {binding.splitButtonTitle.setText(R.string.skirt)}
-            R.id.action_suit -> {binding.splitButtonTitle.setText(R.string.suit)}
-            R.id.action_glasses -> {binding.splitButtonTitle.setText(R.string.glasses)}
-            R.id.action_perfume -> {binding.splitButtonTitle.setText(R.string.perfume)}
-            R.id.action_shirt -> {binding.splitButtonTitle.setText(R.string.shirt)}
-            R.id.action_shoe -> {binding.splitButtonTitle.setText(R.string.shoe)}
-            R.id.action_sweater -> {binding.splitButtonTitle.setText(R.string.sweater)}
-            R.id.action_pant -> {binding.splitButtonTitle.setText(R.string.pant)}
+            R.id.action_t_shirt -> {
+                title.setText(R.string.tshirt)
+                icon.setImageResource(R.drawable.ic_tshirt)
+            }
+
+            R.id.action_jacket -> {
+                title.setText(R.string.jacket)
+                icon.setImageResource(R.drawable.ic_jacket)}
+
+            R.id.action_dress -> {
+                title.setText(R.string.dress)
+                icon.setImageResource(R.drawable.ic_dress)
+            }
+
+            R.id.action_accessories -> {
+                    title.setText(R.string.accessories)
+                icon.setImageResource(R.drawable.ic_accessories)
+                }
+
+            R.id.action_skirt -> {
+                title.setText(R.string.skirt)
+                icon.setImageResource(R.drawable.ic_skirt)
+            }
+
+            R.id.action_suit -> {
+                title.setText(R.string.suit)
+                icon.setImageResource(R.drawable.ic_suit)
+            }
+
+            R.id.action_glasses -> {
+                title.setText(R.string.glasses)
+                icon.setImageResource(R.drawable.ic_eyeglasses)
+            }
+
+            R.id.action_perfume -> {
+                title.setText(R.string.perfume)
+                icon.setImageResource(R.drawable.ic_perfume)
+            }
+
+            R.id.action_shirt -> {
+                title.setText(R.string.shirt)
+                icon.setImageResource(R.drawable.ic_shirt)
+            }
+
+            R.id.action_shoe -> {
+                title.setText(R.string.shoe)
+                icon.setImageResource(R.drawable.ic_shoe)
+            }
+
+            R.id.action_sweater -> {
+                title.setText(R.string.sweater)
+                icon.setImageResource(R.drawable.ic_sweater)
+            }
+
+            R.id.action_pant -> {
+                title.setText(R.string.pant)
+                icon.setImageResource(R.drawable.ic_pant)
+            }
+
             else -> return false
         }
         return true

@@ -14,8 +14,7 @@
     <eightbitlab.com.blurview.BlurTarget
         android:id="@+id/blur_target"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="64dp">
+        android:layout_height="match_parent">
 
         <!-- Scroll View -->
         <androidx.core.widget.NestedScrollView
@@ -24,8 +23,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:paddingTop="@dimen/_64dp"
                 android:layout_gravity="center_horizontal">
 
                 <!-- Filter bar -->
@@ -43,80 +43,75 @@
                         tools:ignore="RtlSymmetry"
                         app:singleLine="true"
                         app:singleSelection="false"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        app:chipSpacing="8dp">
+                        android:paddingTop="@dimen/_8dp"
+                        android:paddingBottom="@dimen/_8dp"
+                        app:chipSpacing="@dimen/_8dp">
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="filtreler"
-                            style="@style/Widget.Material3.Chip.Filter"
-                            app:chipIconEnabled="true"
-                            app:chipIconTint="@color/dark"
-                            app:checkedIconEnabled="false"
-                            app:chipIconVisible="true"
-                            app:chipIcon="@drawable/state_categories_popmenu_button"/>
+                            android:text="@string/filter"
+                            style="@style/G101.Chips.MainFilter"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kış"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            android:text="@string/autumn"
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yaz"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            android:text="@string/winter"
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sonbahar"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            android:text="@string/spring"
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="İlkbahar"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            android:text="@string/summer"
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Marka"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="filtreler"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="filtreler"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="filtreler"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="filtreler"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            style="@style/G101.Chips"/>
 
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="filtreler"
-                            style="@style/Widget.Material3.Chip.Filter"/>
+                            style="@style/G101.Chips"/>
                         
                     </com.google.android.material.chip.ChipGroup>
                 </HorizontalScrollView>
@@ -124,11 +119,11 @@
                 <!-- Ad Banner -->
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_height="@dimen/_80dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
                     android:src="@drawable/banner_ad_mob"/>
 
@@ -136,7 +131,7 @@
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingBottom="16dp"/>
+                    android:paddingBottom="@dimen/_16dp" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
@@ -157,15 +152,15 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="@dimen/_64dp"
                 android:background="@color/transparent"
                 app:navigationIcon="@drawable/ic_left_arrow"
                 app:menu="@menu/appbar_btn_categories_appbar_help">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/ic_category_icon"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="@dimen/_48dp"
+                    android:layout_height="@dimen/_48dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_shoe"
                     android:scaleType="center"/>
@@ -173,21 +168,22 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/txt_category_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="48dp"
+                    android:layout_height="@dimen/_48dp"
                     style="@style/G101.Text.Second_Title"
                     android:text="Ayakkabı"
                     android:layout_gravity="center" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/btn_pop_menu"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="@dimen/_48dp"
+                    android:layout_height="@dimen/_48dp"
                     style="@style/Widget.Material3.Button.IconButton.Outlined"
-                    android:src="@drawable/state_categories_popmenu_button"
+                    android:src="@drawable/state_dropdown_icon"
                     android:scaleType="center"
                     android:focusable="true"
                     android:clickable="true"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clipToOutline="true"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraSmall"
                     android:layout_gravity="center" />
 

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center|start"
-    android:background="@drawable/bg_segmented_bar"
+    android:background="@drawable/bg_segmented_horizontal_button_bar"
     android:paddingHorizontal="6dp"
     android:paddingVertical="6dp">
 
@@ -14,7 +14,7 @@
         android:id="@+id/btn_segmented_next_button"
         android:layout_width="80dp"
         android:layout_height="32dp"
-        android:background="@drawable/bg_segmented_button"
+        android:background="@drawable/state_segmented_next_button"
         android:foreground="?attr/selectableItemBackgroundBorderless"
         android:clipToOutline="true"
         android:contentDescription="@string/next"

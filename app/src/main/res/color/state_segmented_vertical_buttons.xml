@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Disabled State-->
+    <item android:color="@color/unskipable_segmented_button" android:state_enabled="false"/>
+    
+    <!-- Selected State -->
+    <item android:color="@color/selected_segmented_button" android:state_selected="true"/>
+    
+    <!-- Default State -->
+    <item android:color="@color/unselected_segmented_button"/>
+    
+</selector>

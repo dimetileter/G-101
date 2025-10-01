@@ -19,8 +19,11 @@
     <color name="app_theme_intense">#F8A44C</color>
     <color name="app_theme_primary">#FFC68A</color>
     <color name="app_theme_primary_op50">#CCFFC68A</color> <!--50%-->
+    <color name="app_theme_primary_op40">#66FFC68A</color> <!--40%-->
     <color name="app_theme_primary_op10">#1AFFC68A</color> <!--10%-->
     <color name="app_theme_light">#EEDECD</color>
+
+
     <color name="card_background">@color/white</color>
     <color name="activity_background">#F2F2F2</color>
     <color name="transparent_title_background">@color/white_op70</color> <!--70%-->
@@ -31,7 +34,7 @@
     <color name="segmented_button_bar">#3C787880</color>
     <color name="selected_segmented_button">@color/white</color>
     <color name="unselected_segmented_button">@color/transparent</color>
-    <color name="unskipable_segmented_button">#19D9D9D9</color>
+    <color name="unskipable_segmented_button">#1A0D0D0D</color>
     <color name="favorite_heart_red">#C62424</color>
 
     <!--Text colors-->

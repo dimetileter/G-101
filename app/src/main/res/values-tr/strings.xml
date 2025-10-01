@@ -31,7 +31,7 @@
     <string name="category">Kategori</string>">
     <string name="favorite_clothes">Favori Kıyafetler</string>
     <string name="favorites_combines">Favori Kombinler</string>">
-    <string name="filter">Filitre</string>
+    <string name="filter">Filitrele</string>
     <string name="done">Bitti</string>
     <string name="all">Tümü</string>
 
@@ -65,10 +65,11 @@ ile özgün kombinler oluşturun. Elinizdeki parçalara uygun olabilecek kıyafe
     <string name="brand">Marka</string>
     <string name="model">Model</string>
     <string name="season">Sezon</string>
-    <string name="color">Renk</string>
-    <string name="size">Beden</string>
-    <string name="material">Meteryal</string>
+    <string name="color">Renk :</string>
+    <string name="size">Beden :</string>
+    <string name="material">Meteryal :</string>
     <string name="tags">Etiketler</string>
+    <string name="tags_">Etiketler :</string>
     <string name="general_characteristics">Genel Özellikler</string>">
     <string name="number_of_piece">Parça sayısı</string>
     <string name="theme">Tema</string>
@@ -87,6 +88,12 @@ ile özgün kombinler oluşturun. Elinizdeki parçalara uygun olabilecek kıyafe
     <string name="sweater">Kazak</string>
     <string name="pant">Pantolon</string>
     <string name="view_your_clothes">Kıyafetlerinizi görüntüleyin</string>
+
+    <!-- Seasons -->
+    <string name="autumn">Sonbahar</string>
+    <string name="winter">Kış</string>
+    <string name="spring">İlkbahar</string>
+    <string name="summer">Yaz</string>
 
     <!--Settings-->
     <string name="header_profile_subs_settings">Profil ve Abonelik Ayarları</string>

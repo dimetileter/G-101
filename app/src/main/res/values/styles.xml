@@ -46,10 +46,14 @@
         <item name="cardBackgroundColor">@color/card_background</item>
     </style>
 
-
     <!-- Banners -->
     <style name="G101.Cards.Banner" parent="G101.Cards">
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
+    </style>
+
+    <!-- Clothes Input Cards -->
+    <style name="G101.Cards.InputCards" parent="G101.Cards">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Small</item>
     </style>
 
     <!--
@@ -205,12 +209,26 @@
     </style>
 
     <!--
-        CARDS
-         - Banners
-         -
+        CHIPS
+         - Filter Chip
+         - Filter Chip Menu
          -
          -
     -->
+
+    <!-- Main Chip -->
+    <style name="G101.Chips" parent="@style/Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/dark</item>
+        <!-- <item name="chipStrokeColor">@color/app_theme_intense</item> -->
+    </style>
+
+    <style name="G101.Chips.MainFilter" parent="G101.Chips">
+        <item name="android:checkable">false</item>
+        <item name="chipIconVisible">true</item>
+        <item name="chipIcon">@drawable/outline_filter_list_24</item>
+        <item name="chipIconTint">@color/dark</item>
+    </style>
 
     <!--
         XXXX

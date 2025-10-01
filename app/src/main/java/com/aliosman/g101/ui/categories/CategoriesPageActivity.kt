@@ -11,9 +11,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aliosman.g101.R
+import com.aliosman.g101.core.utils.BaseActivity
 import com.aliosman.g101.databinding.ActivityCategoriesPageBinding
 
-class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
+class CategoriesPageActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
 
     private lateinit var binding: ActivityCategoriesPageBinding
     private lateinit var popupMenu: PopupMenu
@@ -33,6 +34,10 @@ class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickLis
             insets
         }
 
+        // Set up toolbar actions
+        val toolbar = binding.toolbar
+        setupToolbar(toolbar)
+
         // Recycler Adapter
         val clothesList = getClothesList()
         recyclerAdapter = ClothesListRecyclerAdapter(clothesList)
@@ -43,16 +48,11 @@ class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickLis
         // BlurView
         setBlurView()
 
-        // Appbar navigaion ıcon
-        binding.toolbar.setNavigationOnClickListener {
-            setAppbarNavigationIconBehavior()
-        }
-
         // Split button actions
         val splitButtonMenu = binding.btnPopMenu
         splitButtonMenu.setOnClickListener {
-            splitButtonMenu.isSelected = true
             showPopupMenu()
+            splitButtonMenu.isSelected = true
         }
 
         // Pop menu initialization and listeners
@@ -180,10 +180,6 @@ class CategoriesPageActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickLis
             else -> return false
         }
         return true
-    }
-
-    private fun setAppbarNavigationIconBehavior() {
-        onBackPressedDispatcher.onBackPressed()
     }
 
     // Set blur view

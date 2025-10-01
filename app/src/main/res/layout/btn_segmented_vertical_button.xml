@@ -1,0 +1,18 @@
+<!--
+
+    The button included plus ("+") symbol temporarily
+    Please do not forget to settle icons in Activity/Fragment.kt side
+
+-->
+
+<ImageButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btn_vertical_segment_button"
+    android:layout_width="@dimen/_32dp"
+    android:layout_height="@dimen/_48dp"
+    app:iconGravity="textStart"
+    android:focusable="true"
+    android:clickable="true"
+    android:clipToOutline="true"
+    android:background="@drawable/state_segmented_vertical_button"/>

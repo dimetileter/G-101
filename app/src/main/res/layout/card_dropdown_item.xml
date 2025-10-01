@@ -1,0 +1,49 @@
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_16dp"
+    android:layout_marginEnd="@dimen/_16dp"
+    android:layout_marginTop="@dimen/_4dp"
+    android:layout_marginBottom="@dimen/_4dp"
+    style="@style/G101.Cards.InputCards"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_4dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tct_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/G101.Text.Regular_Text"
+            android:gravity="center_vertical"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/G101.Text.Light_Text"
+            android:gravity="center_vertical"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dropdown"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_gravity="end"
+            style="@style/Widget.Material3.Button.IconButton"
+            app:icon="@drawable/state_dropdown_icon"
+            app:iconTint="@color/dark"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

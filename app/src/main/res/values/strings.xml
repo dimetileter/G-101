@@ -64,10 +64,11 @@ Track your clothes in detail with charts.</string>
     <string name="brand">Brand</string>
     <string name="model">Model</string>
     <string name="season">Season</string>
-    <string name="color">Color</string>
-    <string name="size">Size</string>
-    <string name="material">Material</string>
+    <string name="color">Color :</string>
+    <string name="size">Size :</string>
+    <string name="material">Material :</string>
     <string name="tags">Tags</string>
+    <string name="tags_">Tags :</string>
     <string name="general_characteristics">General Characteristics</string>
     <string name="number_of_piece">Number of piece</string>
     <string name="theme">Theme</string>
@@ -86,6 +87,12 @@ Track your clothes in detail with charts.</string>
     <string name="sweater">Sweater</string>
     <string name="pant">Pant</string>
     <string name="view_your_clothes">View your clothes</string>
+
+    <!-- Seazons -->
+    <string name="autumn">Autumn</string>
+    <string name="winter">Winter</string>
+    <string name="spring">Spring</string>
+    <string name="summer">Summer</string>
 
 
     <!--Settings-->

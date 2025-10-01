@@ -1,0 +1,36 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_6dp"
+    android:paddingEnd="@dimen/_6dp"
+    android:paddingTop="@dimen/_6dp"
+    android:paddingBottom="@dimen/_6dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_segmented_vertical_button_bar">
+
+    <!-- Top and first button -->
+    <include
+        android:id="@+id/top_button"
+        layout="@layout/btn_segmented_vertical_button"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3dp"/>
+
+    <!-- Middle and second button -->
+    <include
+        android:id="@+id/mid_button"
+        layout="@layout/btn_segmented_vertical_button"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3dp"/>
+
+    <!-- Bottom and third button -->
+    <include
+        android:id="@+id/bottom_button"
+        layout="@layout/btn_segmented_vertical_button"/>
+
+</LinearLayout>

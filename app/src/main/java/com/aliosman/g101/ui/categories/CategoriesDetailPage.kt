@@ -73,10 +73,10 @@ class CategoriesDetailPage : BaseActivity() {
         // Listen all button, if clicked any one of them then apply that steps:
         buttons.forEach { btn ->
             btn.setOnClickListener {
-                // Before, set unselect all buttons
+                // Before, make all buttons unselected
                 buttons.forEach { it.isSelected = false }
 
-                // Then select clicked one
+                // Then make selected clicked one
                 btn.isSelected = true
             }
         }

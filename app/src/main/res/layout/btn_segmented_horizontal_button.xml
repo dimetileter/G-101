@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The button included plus ("+") symbol temporarily
+    Please do not forget to settle icons in Activity/Fragment.kt side
+-->
+
+
+<LinearLayout
+    android:id="@+id/segmented_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_32dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1"
+    android:background="@drawable/state_segmented_button"
+    android:clickable="true"
+    android:focusable="true"
+    android:clipToOutline="true"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_4dp"
+    android:paddingEnd="@dimen/_4dp"
+    android:paddingTop="@dimen/_4dp"
+    android:paddingBottom="@dimen/_4dp"
+    tools:ignore="TouchTargetSizeCheck"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:contentDescription="@string/camera"
+        android:src="@drawable/ic_add"
+        android:clickable="false"
+        android:focusable="false"
+        android:tooltipText="@string/camera" />
+
+    <Space
+        android:layout_width="@dimen/_2dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txt_button_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        style="@style/G101.Text.Lato_Regular"
+        android:gravity="center|start"/>
+</LinearLayout>

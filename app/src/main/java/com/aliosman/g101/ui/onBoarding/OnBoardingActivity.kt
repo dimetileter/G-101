@@ -9,13 +9,13 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.aliosman.g101.R
-import com.aliosman.g101.databinding.OnBoardingActivityBinding
+import com.aliosman.g101.databinding.ActivityOnBoardingBinding
 import com.aliosman.g101.ui.main.MainActivity
 import kotlin.jvm.java
 
 class OnBoardingActivity : AppCompatActivity() {
 
-    private lateinit var binding: OnBoardingActivityBinding
+    private lateinit var binding: ActivityOnBoardingBinding
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class OnBoardingActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         // Binding
-        binding = OnBoardingActivityBinding.inflate(layoutInflater)
+        binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

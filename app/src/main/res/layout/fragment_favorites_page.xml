@@ -26,88 +26,34 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingTop="64dp">
+                android:paddingTop="@dimen/_64dp">
 
-                <androidx.cardview.widget.CardView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/app_theme_primary"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_height="wrap_content"
+                    style="@style/G101.Layout.SegmentedButtonBar"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_16dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp">
+                    
+                    <include
+                        android:id="@+id/btn_favorite_bar"
+                        layout="@layout/btn_segmented_horizontal_button"/>
+                    
+                    <Space
+                        android:layout_width="@dimen/_3dp"
+                        android:layout_height="match_parent"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/dress_pink"
-                    android:layout_marginBottom="16dp"/>
+                    <include
+                        android:id="@+id/btn_combine_bar"
+                        layout="@layout/btn_segmented_horizontal_button"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/navbar_label"
-                    android:layout_marginBottom="16dp"/>
+                </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/pant_blue"
-                    android:layout_marginBottom="16dp"/>
+                <!-- ViewPager2 Buraya -->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/skirt_green"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="#3B125F"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/material_dynamic_tertiary30"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral_variant80"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/shoe_orange"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/navbar_item_selected"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@android:color/holo_blue_light"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/design_default_color_error"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@android:color/holo_green_light"
-                    android:layout_marginBottom="16dp"/>
-
-                <!-- Listeler ve içerik buraya -->
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

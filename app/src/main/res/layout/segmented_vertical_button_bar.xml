@@ -3,12 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingStart="@dimen/_6dp"
-    android:paddingEnd="@dimen/_6dp"
-    android:paddingTop="@dimen/_6dp"
-    android:paddingBottom="@dimen/_6dp"
-    android:orientation="vertical"
-    android:background="@drawable/bg_segmented_vertical_button_bar">
+    style="@style/G101.Layout.SegmentedButtonBar"
+    android:orientation="vertical">
 
     <!-- Top and first button -->
     <include

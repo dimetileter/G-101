@@ -130,7 +130,7 @@
     </style>
 
     <!--NavBar Text-->
-    <style name="G101.Text.NavigationBar_Label" parent="" >
+    <style name="G101.Text.Lato_Regular" parent="" >
         <item name="fontFamily">@font/lato_regular</item>
         <item name="android:textColor">@color/navbar_label</item>
         <item name="android:textSize">12sp</item>
@@ -229,6 +229,24 @@
         <item name="chipIcon">@drawable/outline_filter_list_24</item>
         <item name="chipIconTint">@color/dark</item>
     </style>
+
+    <!--
+        SEGMENTED BUTTONS AND BARS
+        - Segmented button bar
+        -
+        -
+        -
+    -->
+
+    <!-- Segmented button bar -->
+    <style name="G101.Layout.SegmentedButtonBar" parent="" >
+        <item name="android:paddingStart">@dimen/_6dp</item>
+        <item name="android:paddingEnd">@dimen/_6dp</item>
+        <item name="android:paddingTop">@dimen/_6dp</item>
+        <item name="android:paddingBottom">@dimen/_6dp</item>
+        <item name="android:background">@drawable/bg_segmented_button_bar</item>
+    </style>
+
 
     <!--
         XXXX

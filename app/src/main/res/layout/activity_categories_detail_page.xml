@@ -55,12 +55,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_6dp"
-                        android:background="@drawable/bg_segmented_vertical_button_bar"
+                        style="@style/G101.Layout.SegmentedButtonBar"
                         android:orientation="vertical"
-                        android:paddingStart="@dimen/_6dp"
-                        android:paddingTop="@dimen/_6dp"
-                        android:paddingEnd="@dimen/_6dp"
-                        android:paddingBottom="@dimen/_6dp"
                         app:layout_constraintBottom_toBottomOf="@+id/img_product_image"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/img_product_image">

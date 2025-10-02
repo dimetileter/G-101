@@ -15,4 +15,4 @@
     android:focusable="true"
     android:clickable="true"
     android:clipToOutline="true"
-    android:background="@drawable/state_segmented_vertical_button"/>
+    android:background="@drawable/state_segmented_button"/>

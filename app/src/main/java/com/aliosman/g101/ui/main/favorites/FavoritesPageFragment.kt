@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewOutlineProvider
 import com.aliosman.g101.R
 import com.aliosman.g101.databinding.FragmentFavoritesPageBinding
+import java.awt.font.TextAttribute
 
 class FavoritesPageFragment : Fragment() {
 
@@ -33,6 +33,10 @@ class FavoritesPageFragment : Fragment() {
 
         // BlurEfektini Ayarla
         setBlurView()
+
+        // Settle icon of segmented bar button
+        horizontalSegmentedButtonsImplementation()
+
     }
 
     // On Destroy
@@ -53,6 +57,45 @@ class FavoritesPageFragment : Fragment() {
         blurViewNavBar.setupWith(blurTarget)
             .setFrameClearDrawable(windowBackground)
             .setBlurRadius(radius)
+
+    }
+
+    // Place icons
+    private fun horizontalSegmentedButtonsImplementation() {
+
+        val favoriteBar = binding.btnFavoriteBar
+        val combineBar = binding.btnCombineBar
+        val segmentedBars = listOf(favoriteBar.segmentedBar, combineBar.segmentedBar)
+
+        // Palce text and remove unnecessarily icons
+        favoriteBar.apply {
+            segmentedBar.isSelected = true
+            txtButtonText.apply {
+                setText(R.string.favorites)
+                textAlignment = View.TEXT_ALIGNMENT_CENTER
+            }
+            icon.visibility = View.GONE
+        }
+
+        combineBar.apply {
+            txtButtonText.apply{
+                setText(R.string.combines)
+                textAlignment = View.TEXT_ALIGNMENT_CENTER
+            }
+            icon.visibility = View.GONE
+        }
+
+
+        // // Listen all bars, if clicked any one of them then apply that steps:
+        segmentedBars.forEach { bar ->
+            // Before, make all buttons unselected
+            bar.setOnClickListener {
+                segmentedBars.forEach { it.isSelected = false }
+
+                // Then, make selected that clicked one
+                bar.isSelected = true
+            }
+        }
 
     }
 

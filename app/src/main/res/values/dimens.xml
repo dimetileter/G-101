@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="_0dp">0dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
     <dimen name="_03dp">0.3dp</dimen>
     <dimen name="_2dp">2dp</dimen>
     <dimen name="_3dp">3dp</dimen>
     <dimen name="_4dp">4dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
     <dimen name="_6dp">6dp</dimen>
     <dimen name="_8dp">8dp</dimen>
     <dimen name="_12dp">12dp</dimen>
     <dimen name="_16dp">16dp</dimen>
+    <dimen name="_18dp">18dp</dimen>
     <dimen name="_20dp">20dp</dimen>
     <dimen name="_24dp">24dp</dimen>
     <dimen name="_32dp">32dp</dimen>
     <dimen name="_40dp">40dp</dimen>
     <dimen name="_48dp">48dp</dimen>
     <dimen name="_54dp">54dp</dimen>
+    <dimen name="_56dp">56dp</dimen>
     <dimen name="_60dp">60dp</dimen>
     <dimen name="_64dp">64dp</dimen>
     <dimen name="_80dp">80dp</dimen>
+    <dimen name="_84dp">84dp</dimen>
+    <dimen name="_104dp">104dp</dimen>
+    <dimen name="_108dp">108dp</dimen>
     <dimen name="_126dp">126dp</dimen>
+    <dimen name="_220dp">220dp</dimen>
+    <dimen name="_314dp">314dp</dimen>
 
     <!-- Text Size -->
     <dimen name="_16sp">16sp</dimen>

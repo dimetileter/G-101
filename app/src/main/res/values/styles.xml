@@ -226,7 +226,7 @@
     <style name="G101.Chips.MainFilter" parent="G101.Chips">
         <item name="android:checkable">false</item>
         <item name="chipIconVisible">true</item>
-        <item name="chipIcon">@drawable/outline_filter_list_24</item>
+        <item name="chipIcon">@drawable/ic_filter_list</item>
         <item name="chipIconTint">@color/dark</item>
     </style>
 

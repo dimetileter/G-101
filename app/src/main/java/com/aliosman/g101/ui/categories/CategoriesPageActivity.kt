@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aliosman.g101.R
 import com.aliosman.g101.core.utils.BaseActivity
 import com.aliosman.g101.databinding.ActivityCategoriesPageBinding
+import com.aliosman.g101.adapter.recyclerAdapter.ClothesRecyclerData
 
 class CategoriesPageActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
 
@@ -84,27 +85,26 @@ class CategoriesPageActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener
 
     private fun getClothesList(): List<ClothesRecyclerData> {
         return listOf(
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
-            ClothesRecyclerData(R.drawable.shoe_small, R.string.shoe, R.string.shoe),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
+            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
         )
     }
 

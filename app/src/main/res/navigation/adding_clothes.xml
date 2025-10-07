@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adding_clothes"
+    app:startDestination="@id/fragmentAddStep1">
+
+    <fragment
+        android:id="@+id/fragmentAddStep1"
+        android:name="com.aliosman.g101.ui.main.add.FragmentAddStep1"
+        android:label="fragment_add_step1"
+        tools:layout="@layout/fragment_add_step1" >
+        <action
+            android:id="@+id/action_fragmentAddStep1_to_fragmentAddStep2"
+            app:destination="@id/fragmentAddStep2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddStep2"
+        android:name="com.aliosman.g101.ui.main.add.FragmentAddStep2"
+        android:label="fragment_add_step2"
+        tools:layout="@layout/fragment_add_step2" >
+        <action
+            android:id="@+id/action_fragmentAddStep2_to_fragmentAddStep3"
+            app:destination="@id/fragmentAddStep3" />
+        <action
+            android:id="@+id/action_fragmentAddStep2_to_fragmentAddStep1"
+            app:destination="@id/fragmentAddStep1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddStep3"
+        android:name="com.aliosman.g101.ui.main.add.FragmentAddStep3"
+        android:label="fragment_add_step3"
+        tools:layout="@layout/fragment_add_step3" >
+        <action
+            android:id="@+id/action_fragmentAddStep3_to_fragmentAddStep2"
+            app:destination="@id/fragmentAddStep2" />
+    </fragment>
+</navigation>

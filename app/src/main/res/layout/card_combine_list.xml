@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_combine_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:clipToOutline="true"
+    android:layout_marginBottom="@dimen/_16dp"
+    android:layout_marginStart="@dimen/_8dp"
+    android:layout_marginEnd="@dimen/_8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <!-- Grid Part -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="false"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:paddingStart="@dimen/_4dp"
+        android:paddingEnd="@dimen/_4dp"
+        android:paddingTop="@dimen/_4dp"
+        android:paddingBottom="@dimen/_4dp">
+
+        <!-- 1,1 image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_row1_column1"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_margin="@dimen/_4dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"/>
+
+        <!-- 1,2 image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_row1_column2"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_margin="@dimen/_4dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"/>
+
+        <!-- 2,1 image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_row2_column1"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_margin="@dimen/_4dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"/>
+
+        <!-- 2,2 image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_row2_column2"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_margin="@dimen/_4dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"/>
+
+    </GridLayout>
+
+    <!-- Context Part -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_8dp">
+
+        <!-- Title and decription area -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/_8dp"
+            android:paddingBottom="@dimen/_8dp"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_combine_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/G101.Text.List_Title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="List Title"/>
+
+            <!-- Descritpion -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_combine_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/G101.Text.Description_Title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Description"/>
+
+            <!-- Color dots -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_4dp"
+                android:paddingBottom="@dimen/_4dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_dot1"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/dark"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_dot2"
+                    android:layout_width="@dimen/_5dp"
+                    android:layout_height="@dimen/_5dp"
+                    android:background="@color/dark"
+                    android:layout_marginHorizontal="@dimen/_1dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_dot3"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/dark"
+                    android:layout_marginHorizontal="@dimen/_1dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_dot4"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/dark"
+                    android:layout_marginHorizontal="@dimen/_1dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_dot5"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/dark"
+                    android:layout_marginHorizontal="@dimen/_1dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_dot6"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/dark"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Favorite button area -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_gravity="bottom"
+            style="@style/Widget.Material3.Button.IconButton"
+            app:iconTint="@color/dark"
+            app:icon="@drawable/state_favorite_ic_heart"/>
+
+    </LinearLayout>
+
+</LinearLayout>

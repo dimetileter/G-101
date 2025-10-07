@@ -33,8 +33,8 @@
                     android:layout_height="wrap_content"
                     style="@style/G101.Layout.SegmentedButtonBar"
                     android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/_16dp"
-                    android:layout_marginBottom="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_8dp"
                     android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginEnd="@dimen/_16dp">
                     
@@ -52,8 +52,99 @@
 
                 </LinearLayout>
 
-                <!-- ViewPager2 Buraya -->
+                <!-- Filter bar -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
+                    <!-- Chip group -->
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        android:paddingStart="16dp"
+                        tools:ignore="RtlSymmetry"
+                        app:singleLine="true"
+                        app:singleSelection="false"
+                        android:paddingTop="@dimen/_8dp"
+                        android:paddingBottom="@dimen/_8dp"
+                        app:chipSpacing="@dimen/_8dp">
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/filter"
+                            style="@style/G101.Chips.MainFilter"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/autumn"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/winter"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/spring"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summer"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Marka"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/G101.Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="filtreler"
+                            style="@style/G101.Chips"/>
+
+                    </com.google.android.material.chip.ChipGroup>
+                </HorizontalScrollView>
+
+                <!-- Favorite Pages Container -->
+                <FrameLayout
+                    android:id="@+id/favorites_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

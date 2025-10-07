@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.aliosman.g101.databinding.CardClothesListBinding
+import com.aliosman.g101.adapter.recyclerAdapter.ClothesRecyclerData
 
 internal class ClothesListRecyclerAdapter(private val clothesList: List<ClothesRecyclerData>) :
     RecyclerView.Adapter<ClothesListRecyclerAdapter.ClothesListViewHolder>() {
@@ -25,8 +26,8 @@ internal class ClothesListRecyclerAdapter(private val clothesList: List<ClothesR
     ) {
         val item = clothesList[position]
         holder.binding.imgClothes.setImageResource(item.imageRes)
-        holder.binding.txtTitle.setText(item.titleRes)
-        holder.binding.txtSubtitle.setText(item.subtitleRes)
+        holder.binding.txtTitle.text = item.title
+        holder.binding.txtSubtitle.text = item.subtitle
     }
 
     override fun getItemCount(): Int = clothesList.size

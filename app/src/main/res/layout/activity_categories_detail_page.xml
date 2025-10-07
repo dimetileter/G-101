@@ -257,6 +257,16 @@
                     android:id="@+id/card_dropdown_material"
                     layout="@layout/card_dropdown_item"/>
 
+                <!-- Texture input -->
+                <include
+                    android:id="@+id/card_dropdown_texture"
+                    layout="@layout/card_dropdown_item"/>
+
+                <!-- Weather Input -->
+                <include
+                    android:id="@+id/card_dropdown_weather"
+                    layout="@layout/card_dropdown_item"/>
+
                 <!-- Product Code input -->
                 <include
                     android:id="@+id/card_dropdown_product_code"

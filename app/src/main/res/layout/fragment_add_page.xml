@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Fragment add page -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,8 +10,6 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".ui.main.add.AddPageFragment">
-
-    <!-- İçerik -->
 
     <!-- Appbar -->
     <com.google.android.material.appbar.MaterialToolbar
@@ -31,5 +31,111 @@
             style="@style/Widget.Material3.Button.IconButton"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Progress Indıcator -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:trackThickness="@dimen/_4dp"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:indeterminate="false"
+        android:progress="0"
+        android:max="100"
+        android:layout_marginTop="@dimen/_4dp"
+        android:layout_marginBottom="@dimen/_4dp"
+        app:indicatorColor="@color/app_theme_intense"
+        app:trackColor="@color/app_theme_light"/>
+
+    <!-- Segmented Button and notice text area-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_add_page"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/adding_clothes" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingBottom="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_104dp">
+
+        <!-- Segmented Horizontal Button -->
+        <LinearLayout
+            android:id="@+id/ll_horizontal_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/G101.Layout.SegmentedButtonBar"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <!-- Button 1 -->
+            <include
+                android:id="@+id/button_1"
+                layout="@layout/btn_segmented_horizontal_button"/>
+
+            <Space
+                android:layout_width="3dp"
+                android:layout_height="match_parent" />
+
+            <!-- Button 2 -->
+            <include
+                android:id="@+id/button_2"
+                layout="@layout/btn_segmented_horizontal_button"/>
+
+            <Space
+                android:layout_width="3dp"
+                android:layout_height="match_parent" />
+
+            <!-- Next Button -->
+            <include
+                android:id="@+id/btn_next"
+                layout="@layout/btn_segmented_next_button"/>
+
+        </LinearLayout>
+
+        <!-- Next and Back button -->
+        <LinearLayout
+            android:id="@+id/ll_next_and_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            style="@style/G101.Layout.SegmentedButtonBar">
+
+            <include
+                android:id="@+id/btn_back"
+                layout="@layout/btn_segmented_next_button"/>
+
+            <Space
+                android:layout_width="@dimen/_3dp"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/btn_segmented_next_button"
+                layout="@layout/btn_segmented_next_button" />
+
+        </LinearLayout>
+
+        <!-- Text -->
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/G101.Text.Description_Title"
+            android:text="@string/choosing_notice"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
 
 </LinearLayout>

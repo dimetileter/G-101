@@ -34,6 +34,7 @@
 
     <!-- Progress Indıcator -->
     <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:trackThickness="@dimen/_4dp"
@@ -70,38 +71,56 @@
         android:paddingBottom="@dimen/_8dp"
         android:layout_marginBottom="@dimen/_104dp">
 
-        <!-- Segmented Horizontal Button -->
+        <!-- Segmented button and info text area -->
         <LinearLayout
             android:id="@+id/ll_horizontal_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/G101.Layout.SegmentedButtonBar"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:visibility="visible">
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
-            <!-- Button 1 -->
-            <include
-                android:id="@+id/button_1"
-                layout="@layout/btn_segmented_horizontal_button"/>
+            <!-- Segmented Horizontal Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/G101.Layout.SegmentedButtonBar"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-            <Space
-                android:layout_width="3dp"
-                android:layout_height="match_parent" />
+                <!-- Button 1 -->
+                <include
+                    android:id="@+id/button_1"
+                    layout="@layout/btn_segmented_horizontal_button"/>
 
-            <!-- Button 2 -->
-            <include
-                android:id="@+id/button_2"
-                layout="@layout/btn_segmented_horizontal_button"/>
+                <Space
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent" />
 
-            <Space
-                android:layout_width="3dp"
-                android:layout_height="match_parent" />
+                <!-- Button 2 -->
+                <include
+                    android:id="@+id/button_2"
+                    layout="@layout/btn_segmented_horizontal_button"/>
 
-            <!-- Next Button -->
-            <include
-                android:id="@+id/btn_next"
-                layout="@layout/btn_segmented_next_button"/>
+                <Space
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent" />
+
+                <!-- Next Button -->
+                <include
+                    android:id="@+id/btn_next"
+                    layout="@layout/btn_segmented_next_button"/>
+
+            </LinearLayout>
+
+            <!-- Text -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_segmented_buttons_info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/G101.Text.Description_Title"
+                android:text="@string/choosing_notice"
+                android:textAlignment="center"/>
 
         </LinearLayout>
 
@@ -119,22 +138,13 @@
                 layout="@layout/btn_segmented_next_button"/>
 
             <Space
-                android:layout_width="@dimen/_3dp"
+                android:layout_width="@dimen/_6dp"
                 android:layout_height="match_parent"/>
 
             <include
-                android:id="@+id/btn_segmented_next_button"
+                android:id="@+id/btn_next_step2"
                 layout="@layout/btn_segmented_next_button" />
-
         </LinearLayout>
-
-        <!-- Text -->
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/G101.Text.Description_Title"
-            android:text="@string/choosing_notice"
-            android:textAlignment="center"/>
 
     </LinearLayout>
 

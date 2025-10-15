@@ -3,13 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.aliosman.g101">
 
-    <!-- Medya okuması için -->
-<!--    <uses-permisions android:name = "android.permission.READ_EXTERNAL_STORAGE"/>-->
-<!--    <uses-permisions android:name = "android.permission.READ_MEDİA_IMAGES"/>-->
-
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"

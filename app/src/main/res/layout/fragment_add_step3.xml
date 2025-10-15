@@ -1,14 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_background"
     tools:context=".ui.main.add.FragmentAddStep3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Context -->
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/G101.Text.Regular_Text"
+                android:text="@string/add_clothes3_desc"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:textAlignment="center"/>
+
+            <!-- Product image and group button -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:paddingTop="@dimen/_8dp"
+                android:paddingBottom="@dimen/_8dp">
+
+                <!-- Product Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_product_image"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shoe_large"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    app:strokeWidth="@dimen/_1dp"
+                    app:strokeColor="@color/app_theme_intense"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Title and Description bar -->
+
+
+            <!-- Divider -->
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_03dp"
+                app:dividerColor="@color/outline_stroke"/>
+
+            <!-- General Characteristics -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48dp"
+                style="@style/G101.Text.Header"
+                android:text="@string/general_characteristics" />
+
+            <!-- Brand input -->
+            <include
+                android:id="@+id/card_dropdown_brand"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Model input -->
+            <include
+                android:id="@+id/card_dropdown_model"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Season input -->
+            <include
+                android:id="@+id/card_dropdown_season"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Categories input -->
+            <include
+                android:id="@+id/card_dropdown_categories"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Color input -->
+            <include
+                android:id="@+id/card_dropdown_color"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Size input -->
+            <include
+                android:id="@+id/card_dropdown_size"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Material input -->
+            <include
+                android:id="@+id/card_dropdown_material"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Texture input -->
+            <include
+                android:id="@+id/card_dropdown_texture"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Weather Input -->
+            <include
+                android:id="@+id/card_dropdown_weather"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Product Code input -->
+            <include
+                android:id="@+id/card_dropdown_product_code"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Barcode input -->
+            <include
+                android:id="@+id/card_dropdown_barcode"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Tags -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48dp"
+                style="@style/G101.Text.Header"
+                android:text="@string/tags" />
+
+            <!-- Tag input -->
+            <include
+                android:id="@+id/card_dropdown_tag"
+                layout="@layout/card_dropdown_item"/>
+
+            <!-- Description -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48dp"
+                style="@style/G101.Text.Header"
+                android:text="@string/description" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_126dp"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                style="@style/G101.Cards">
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Next and Back button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_24dp"
+                style="@style/G101.Layout.SegmentedButtonBar">
+
+                <include
+                    android:id="@+id/btn_done"
+                    layout="@layout/btn_segmented_horizontal_text_button"/>
+
+            </LinearLayout>
+
+            <!-- Uyarı metni -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/G101.Text.Description_Title"
+                android:text=""/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

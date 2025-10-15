@@ -23,7 +23,10 @@
     <string name="send_feedback">Geri Bildirim Gönder</string>
     <string name="buy_me_a_coffee">Bize Kahve Ismarlayın</string>
     <string name="weather">Parçalı bulutlu</string>
-    <string name="profile_settings">Profil ayarları</string>"
+    <string name="profile_settings">Profil ayarları</string>
+    <string name="gallery_permission">Galeriye erişmek için izin gerekli</string>
+    <string name="allow">İzin ver</string>
+    <string name="fill_in_the_required_fields">Zorunlu alanları doldurunuz</string>
 
     <!---->
     <string name="favorites">Favoriler</string>

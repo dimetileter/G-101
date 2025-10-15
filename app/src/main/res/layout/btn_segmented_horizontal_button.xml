@@ -8,6 +8,7 @@
 <LinearLayout
     android:id="@+id/segmented_bar"
     android:layout_width="match_parent"
+    android:minWidth="@dimen/_80dp"
     android:layout_height="@dimen/_32dp"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_weight="1"

@@ -32,6 +32,13 @@ class OnBoardingActivity : AppCompatActivity() {
             insets
         }
 
+        checkOnboardingStatus()
+        setUpNavigationAndListener()
+
+    }
+
+    // setUpNavigate
+    private fun setUpNavigationAndListener() {
         // NavHostFragment üzerinden navController al
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         navController = navHostFragment.navController
@@ -39,7 +46,6 @@ class OnBoardingActivity : AppCompatActivity() {
         // Butonu ayarla
         val nextButton = binding.btnSegmentedNextButton.btnSegmentedNextButton
         nextButton.isSelected = true
-
         nextButton.setOnClickListener {
             when (navController.currentDestination?.id) {
                 R.id.introFragment1 -> {
@@ -50,11 +56,27 @@ class OnBoardingActivity : AppCompatActivity() {
                 }
                 R.id.introFragment3 -> {
                     // 3. fragmentten sonra başka activity aç
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    rotateToMainActivity()
                     finish()
                 }
             }
         }
+    }
+
+    // Check onboarding status
+    private fun checkOnboardingStatus() {
+        val prefManager = OnboardingSharedPreferencesManager(applicationContext)
+        if (prefManager.isOnboardingCompleted()) {
+            rotateToMainActivity()
+            finish()
+        } else {
+            prefManager.markOnboardingCompleted()
+        }
+    }
+
+    // Rotate to Main Activity
+    private fun rotateToMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }

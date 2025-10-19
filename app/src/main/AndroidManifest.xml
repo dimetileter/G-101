@@ -2,12 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.aliosman.g101">
-
     <!-- Medya okuması için -->
-<!--    <uses-permisions android:name = "android.permission.READ_EXTERNAL_STORAGE"/>-->
-<!--    <uses-permisions android:name = "android.permission.READ_MEDİA_IMAGES"/>-->
-
+    <!-- <uses-permisions android:name = "android.permission.READ_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permisions android:name = "android.permission.READ_MEDİA_IMAGES"/> -->
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -20,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.G101"
         tools:targetApi="33">
+        <activity
+            android:name=".ui.main.add.AddPageActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.categories.CategoriesDetailPage"
             android:exported="false" />

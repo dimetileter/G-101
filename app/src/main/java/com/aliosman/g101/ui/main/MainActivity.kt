@@ -46,9 +46,7 @@ class MainActivity : AppCompatActivity() {
         // Appbar ve navigation bar blur efekti uygula
         blurEffect()
 
-
     }
-
 
     // Set up ViewPager and Navigation Bottom Bar
     private fun viewPagerAndNavigationBarSync(navBar: BottomNavigationView) {

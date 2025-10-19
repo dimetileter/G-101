@@ -3,6 +3,7 @@ package com.aliosman.g101.adapter.viewPagerAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.aliosman.g101.ui.main.add.AddPageActivity
 import com.aliosman.g101.ui.main.add.AddPageFragment
 import com.aliosman.g101.ui.main.combine.CombinePageFragment
 import com.aliosman.g101.ui.main.favorites.FavoritesPageFragment
@@ -14,8 +15,7 @@ class MainPagesViewPager(activity: AppCompatActivity):
         val fragmentList = listOf(
             HomePageFragment(),
             CombinePageFragment(),
-            FavoritesPageFragment(),
-            AddPageFragment()
+            FavoritesPageFragment()
         )
 
     override fun createFragment(position: Int): Fragment = fragmentList[position]

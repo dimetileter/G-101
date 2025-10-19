@@ -1,5 +1,6 @@
 package com.aliosman.g101.ui.main
 
+import android.content.Intent
 import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
 import android.view.ViewOutlineProvider
@@ -13,6 +14,8 @@ import com.aliosman.g101.adapter.viewPagerAdapter.MainPagesViewPager
 import com.aliosman.g101.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.core.view.get
+import com.aliosman.g101.ui.main.add.AddPageActivity
+import com.aliosman.g101.ui.main.add.AddPageFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -67,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home_page -> viewPager.setCurrentItem(0, false)
                 R.id.combine_page -> viewPager.setCurrentItem(1, false)
                 R.id.favorite_page -> viewPager.setCurrentItem(2, false)
-                R.id.add_page -> viewPager.setCurrentItem(3, false)
+                R.id.add_page -> {startAddPageActivity()}
             }
             true
         }
@@ -90,5 +93,11 @@ class MainActivity : AppCompatActivity() {
             .setFrameClearDrawable(windowBackground)
             .setBlurRadius(radius)
 
+    }
+
+    // Start AddPage Activity
+    private fun startAddPageActivity() {
+        val intent = Intent(this, AddPageActivity::class.java)
+        startActivity(intent)
     }
 }

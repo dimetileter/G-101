@@ -6,7 +6,7 @@
     <!-- Disabled state -->
     <item android:state_enabled="false">
         <shape android:shape="rectangle">
-            <corners android:radius="60dp"/>
+            <corners android:radius="@dimen/_60dp"/>
             <solid android:color="@color/unskipable_segmented_button"/>
         </shape>
     </item>
@@ -15,16 +15,23 @@
     <!-- Selected state -->
     <item android:state_selected="true">
         <shape android:shape="rectangle">
-            <corners android:radius="60dp"/>
+            <corners android:radius="@dimen/_60dp"/>
             <solid android:color="@color/selected_segmented_button"/>
         </shape>
     </item>
 
+    <!-- Hovered -->
+<!--    <item android:state_pressed="true">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:radius="@dimen/_60dp"/>-->
+<!--            <solid android:color="@color/selected_segmented_button"/>-->
+<!--        </shape>-->
+<!--    </item>-->
 
     <!-- Default (unselected & enabled) state -->
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="60dp"/>
+            <corners android:radius="@dimen/_60dp"/>
             <solid android:color="@color/unselected_segmented_button"/>
         </shape>
     </item>

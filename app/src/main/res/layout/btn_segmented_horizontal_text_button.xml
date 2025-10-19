@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/txt_button_text"
+    android:layout_width="80dp"
+    android:layout_height="32dp"
+    android:minWidth="@dimen/_80dp"
+    android:background="@drawable/state_segmented_next_button"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:clipToOutline="true"
+    android:clickable="true"
+    android:focusable="true"
+    style="@style/G101.Text.Lato_Regular"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

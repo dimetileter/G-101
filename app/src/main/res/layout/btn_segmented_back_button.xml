@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImageButton
+    android:id="@+id/btn_segmented_back_button"
+    android:layout_width="80dp"
+    android:layout_height="32dp"
+    android:background="@drawable/state_segmented_next_button"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:clipToOutline="true"
+    android:contentDescription="@string/back"
+    android:src="@drawable/ic_back_arrow_left"
+    android:tooltipText="@string/next"
+    tools:ignore="TouchTargetSizeCheck"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />

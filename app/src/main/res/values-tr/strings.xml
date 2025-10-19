@@ -15,6 +15,7 @@
     <!--System-->
     <string name="search_here">Arayın</string>
     <string name="next">Sonraki</string>
+    <string name="back">Önceki</string>
     <string name="camera">Kamera</string>
     <string name="gallery">Galeri</string>
     <string name="settings">Ayarlar</string>
@@ -23,7 +24,10 @@
     <string name="send_feedback">Geri Bildirim Gönder</string>
     <string name="buy_me_a_coffee">Bize Kahve Ismarlayın</string>
     <string name="weather">Parçalı bulutlu</string>
-    <string name="profile_settings">Profil ayarları</string>"
+    <string name="profile_settings">Profil ayarları</string>
+    <string name="gallery_permission">Galeriye erişmek için izin gerekli</string>
+    <string name="allow">İzin ver</string>
+    <string name="fill_in_the_required_fields">Zorunlu alanları doldurunuz</string>
 
     <!---->
     <string name="favorites">Favoriler</string>

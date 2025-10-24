@@ -15,102 +15,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.core.widget.NestedScrollView
+        <!--
+            TODO: Linear Layout'u kaldırıp padding ayarlarını recycler
+            TODO: adapter'a vererek tekrar dene
+        -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            android:scrollbars="none">
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_64dp"
+            android:layout_marginBottom="@dimen/_16dp">
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingTop="64dp">
+                android:layout_height="wrap_content"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/app_theme_primary"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/dress_pink"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/navbar_label"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/pant_blue"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/skirt_green"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="#3B125F"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/material_dynamic_tertiary30"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral_variant80"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/shoe_orange"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/navbar_item_selected"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@android:color/holo_blue_light"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@color/design_default_color_error"
-                    android:layout_marginBottom="16dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    app:cardBackgroundColor="@android:color/holo_green_light"
-                    android:layout_marginBottom="16dp"/>
-
-                <!-- Listeler ve içerik buraya -->
-
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
     </eightbitlab.com.blurview.BlurTarget>
 
 

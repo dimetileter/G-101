@@ -6,6 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.aliosman.g101.data.entity.Category
 import com.aliosman.g101.data.entity.Clothes
 
 @Dao
@@ -25,5 +26,9 @@ interface ClothesDao {
 
     // Order by creating time
     @Query("SELECT * FROM clothes ORDER BY createdAt DESC")
-    suspend fun getAllClothes(): LiveData<List<Clothes>>
+    suspend fun getAllClothes(): List<Clothes>
+
+    // Get specific categories's clothes
+    @Query("SELECT * FROM CLOTHES WHERE categoryId = :categoryId ORDER BY clothingName ASC")
+    suspend fun getClothesByCategory(categoryId: Int): List<Clothes>
 }

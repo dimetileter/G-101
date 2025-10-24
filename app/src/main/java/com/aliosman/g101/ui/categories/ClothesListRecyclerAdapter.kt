@@ -3,10 +3,12 @@ package com.aliosman.g101.ui.categories
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.aliosman.g101.R
 import com.aliosman.g101.databinding.CardClothesListBinding
 import com.aliosman.g101.adapter.recyclerAdapter.ClothesRecyclerData
+import com.aliosman.g101.data.entity.Clothes
 
-internal class ClothesListRecyclerAdapter(private val clothesList: List<ClothesRecyclerData>) :
+internal class ClothesListRecyclerAdapter(private val clothesList: List<Clothes>) :
     RecyclerView.Adapter<ClothesListRecyclerAdapter.ClothesListViewHolder>() {
 
     class ClothesListViewHolder(val binding: CardClothesListBinding ): RecyclerView.ViewHolder(binding.root)
@@ -25,9 +27,9 @@ internal class ClothesListRecyclerAdapter(private val clothesList: List<ClothesR
         position: Int
     ) {
         val item = clothesList[position]
-        holder.binding.imgClothes.setImageResource(item.imageRes)
-        holder.binding.txtTitle.text = item.title
-        holder.binding.txtSubtitle.text = item.subtitle
+        holder.binding.imgClothes.setImageResource(R.drawable.jean_small)
+        holder.binding.txtTitle.text = item.clothingName
+        holder.binding.txtSubtitle.text = item.clothingDesc
     }
 
     override fun getItemCount(): Int = clothesList.size

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aliosman.g101.R
 import com.aliosman.g101.databinding.FragmentHomePageBinding
-import com.aliosman.g101.ui.categories.CategoriesDetailPage
+import com.aliosman.g101.ui.categories.CategoriesDetailPageActivity
 import com.aliosman.g101.ui.categories.CategoriesPageActivity
 
 class HomePageFragment : Fragment() {
@@ -63,7 +63,7 @@ class HomePageFragment : Fragment() {
 
         // Test button
         binding.btnAccount.setOnClickListener {
-            val intent = Intent(requireContext(), CategoriesDetailPage::class.java)
+            val intent = Intent(requireContext(), CategoriesDetailPageActivity::class.java)
             startActivity(intent)
             onPause()
         }

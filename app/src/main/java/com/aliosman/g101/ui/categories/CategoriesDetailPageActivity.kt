@@ -1,18 +1,17 @@
 package com.aliosman.g101.ui.categories
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.ViewOutlineProvider
-import android.widget.Button
-import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.aliosman.g101.R
 import com.aliosman.g101.core.utils.BaseActivity
 import com.aliosman.g101.databinding.ActivityCategoriesDetailPageBinding
+import com.aliosman.g101.ui.main.MainActivity
 
-class CategoriesDetailPage : BaseActivity() {
+class CategoriesDetailPageActivity : BaseActivity() {
 
     private lateinit var binding: ActivityCategoriesDetailPageBinding
 
@@ -31,7 +30,8 @@ class CategoriesDetailPage : BaseActivity() {
 
         // Set up toolbar actions
         val toolbar = binding.toolbar
-        setupToolbar(toolbar)
+        val intentMainActivity = Intent(this, MainActivity::class.java)
+        setNavigationOnClickListenerWithIntent(toolbar, intentMainActivity, true)
 
         // BlurView
         setBlurView()

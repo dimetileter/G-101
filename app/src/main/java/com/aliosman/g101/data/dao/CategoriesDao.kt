@@ -12,7 +12,11 @@ interface CategoriesDao {
 
     // Insert
     @Insert
-    suspend fun insertCategories(category: Category)
+    suspend fun insertAllCategories(category: List<Category>)
+
+    // Insert
+    @Insert
+    suspend fun insertOnlyOne(category: Category)
 
     // Delete
     @Delete
@@ -20,5 +24,6 @@ interface CategoriesDao {
 
     // Gett all categories as ordered by
     @Query("SELECT * FROM CATEGORIES ORDER BY categoryId ASC")
-    suspend fun getAllCategories(): LiveData<List<Category>>
+    suspend fun getAllCategories(): List<Category>
+
 }

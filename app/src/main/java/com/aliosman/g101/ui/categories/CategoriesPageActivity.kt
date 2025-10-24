@@ -1,11 +1,11 @@
 package com.aliosman.g101.ui.categories
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.view.Menu
 import android.view.ViewOutlineProvider
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.viewModels
 import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -13,13 +13,28 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aliosman.g101.R
 import com.aliosman.g101.core.utils.BaseActivity
 import com.aliosman.g101.databinding.ActivityCategoriesPageBinding
-import com.aliosman.g101.adapter.recyclerAdapter.ClothesRecyclerData
+import com.aliosman.g101.data.db.AppDatabase
+import com.aliosman.g101.data.entity.Category
+import com.aliosman.g101.data.entity.Clothes
+import com.aliosman.g101.data.repository.CategoryRepository
+import com.aliosman.g101.data.repository.ClothesRepository
 
-class CategoriesPageActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
+class CategoriesPageActivity : BaseActivity() {
 
+    // Binding ve popmenu
     private lateinit var binding: ActivityCategoriesPageBinding
     private lateinit var popupMenu: PopupMenu
     private var recyclerAdapter: ClothesListRecyclerAdapter? = null
+
+    // ViewModel'i ve database yapılarını bağla
+    private val db by lazy { AppDatabase.getInstance(this.applicationContext) }
+    private val clothesDao by lazy { db.clothesDao() }
+    private val categoriesDao by lazy { db.categoriesDao() }
+    private val clothesRepository by lazy { ClothesRepository(clothesDao) }
+    private val categoriesRepository by lazy { CategoryRepository(categoriesDao) }
+    private val viewModelFactory by lazy { CategoriesViewModelFactory(clothesRepository, categoriesRepository) }
+    private val viewModel: CategoriesViewModel by viewModels { viewModelFactory }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,38 +50,40 @@ class CategoriesPageActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener
             insets
         }
 
+
+        // Split button and menu
+        setUpSplitButtonAndMenu()
+
+        // Load categories
+        observeViewModel()
+
         // Set up toolbar actions
         val toolbar = binding.toolbar
         setupToolbar(toolbar)
 
-        // Recycler Adapter
-        val clothesList = getClothesList()
-        recyclerAdapter = ClothesListRecyclerAdapter(clothesList)
-        val recyclerView = binding.recyclerView
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = recyclerAdapter
-
         // BlurView
         setBlurView()
+    }
+
+    // Split button and menu
+    private fun setUpSplitButtonAndMenu() {
+
+        // Popup menu
+        popupMenu = PopupMenu(this, binding.btnPopMenu)
+        popupMenu.setOnDismissListener {
+            binding.btnPopMenu.isSelected = false
+        }
 
         // Split button actions
-        val splitButtonMenu = binding.btnPopMenu
-        splitButtonMenu.setOnClickListener {
-            showPopupMenu()
-            splitButtonMenu.isSelected = true
+        binding.btnPopMenu.setOnClickListener {
+            it.isSelected = true
+            // Menüyü göster
+            popupMenu.show()
         }
 
-        // Pop menu initialization and listeners
-        popupMenu = PopupMenu(this, binding.btnPopMenu)
-        popupMenu.setOnMenuItemClickListener(this)
-        popupMenu.setOnDismissListener {
-            // If menu disabled then change button's icon state situation
-            splitButtonMenu.isSelected = false
-        }
+        /*
+                Menüde ikonların gösterilmesi
 
-        //popup menu
-        val inflater = popupMenu.menuInflater
-        inflater.inflate(R.menu.split_button_categories_menu, popupMenu.menu)
         try {
             val field = popupMenu.javaClass.getDeclaredField("mPopup")
             field.isAccessible = true
@@ -80,106 +97,72 @@ class CategoriesPageActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener
             // Reflection başarısız olursa (Android sürümü değiştiğinde olabilir)
             // Hata çıktısını log'lara yazdırır.
         }
-
+        */
     }
 
-    private fun getClothesList(): List<ClothesRecyclerData> {
-        return listOf(
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-            ClothesRecyclerData(R.drawable.shoe_small, "Ayakkabı", "Ayakkabı"),
-        )
-    }
+    // Show Pop Menu
+    private fun updatePopMenu(categories: List<Category>) {
 
-    // Show Pop-Up menu
-    private fun showPopupMenu() {
-        popupMenu.show()
-    }
+        // Menü güncellenirken eski verileri temizle
+        popupMenu.menu.clear()
 
-    // Menu click listener
-    override fun onMenuItemClick(item: MenuItem?): Boolean {
-        val title = binding.txtCategoryText
-        val icon = binding.icCategoryIcon
-        when(item?.itemId) {
-            R.id.action_t_shirt -> {
-                title.setText(R.string.tshirt)
-                icon.setImageResource(R.drawable.ic_tshirt)
-            }
-
-            R.id.action_jacket -> {
-                title.setText(R.string.jacket)
-                icon.setImageResource(R.drawable.ic_jacket)}
-
-            R.id.action_dress -> {
-                title.setText(R.string.dress)
-                icon.setImageResource(R.drawable.ic_dress)
-            }
-
-            R.id.action_accessories -> {
-                    title.setText(R.string.accessories)
-                icon.setImageResource(R.drawable.ic_accessories)
-                }
-
-            R.id.action_skirt -> {
-                title.setText(R.string.skirt)
-                icon.setImageResource(R.drawable.ic_skirt)
-            }
-
-            R.id.action_suit -> {
-                title.setText(R.string.suit)
-                icon.setImageResource(R.drawable.ic_suit)
-            }
-
-            R.id.action_glasses -> {
-                title.setText(R.string.glasses)
-                icon.setImageResource(R.drawable.ic_eyeglasses)
-            }
-
-            R.id.action_perfume -> {
-                title.setText(R.string.perfume)
-                icon.setImageResource(R.drawable.ic_perfume)
-            }
-
-            R.id.action_shirt -> {
-                title.setText(R.string.shirt)
-                icon.setImageResource(R.drawable.ic_shirt)
-            }
-
-            R.id.action_shoe -> {
-                title.setText(R.string.shoe)
-                icon.setImageResource(R.drawable.ic_shoe)
-            }
-
-            R.id.action_sweater -> {
-                title.setText(R.string.sweater)
-                icon.setImageResource(R.drawable.ic_sweater)
-            }
-
-            R.id.action_pant -> {
-                title.setText(R.string.pant)
-                icon.setImageResource(R.drawable.ic_pant)
-            }
-
-            else -> return false
+        if(categories.isEmpty()) {
+            Toast.makeText(this, "Kategori listesi boş döndü", Toast.LENGTH_SHORT).show()
         }
-        return true
+        // Menüyü doldur
+            categories.forEachIndexed { index, category ->
+            popupMenu.menu.add(
+                Menu.NONE,
+                category.categoryId.toInt(),
+                index,
+                getString(category.categoryName)
+            )
+        }
+
+        // Menü tıklama olayını ayarla
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            val selectedCategory = categories.find { it.categoryId.toInt() == menuItem.itemId }
+            selectedCategory?.let {
+                Toast.makeText(this, "Seçilen: ${it.categoryId}", Toast.LENGTH_SHORT).show()
+                // Seçilen kategori ile işlem yap
+                handleCategorySelection(it)
+            }
+            true
+        }
+    }
+
+    private fun handleCategorySelection(category: Category) {
+        // Seçilen kategorinin metnini metin kutusuna koy
+        binding.txtCategoryText.text = getString(category.categoryName)
+    }
+
+    // Observe ViewModel
+    private fun observeViewModel() {
+        println("Observe fonksiyonuna girildi.")
+
+        viewModel.categoriesList.observe(this) { it ->
+            println("categories Observe içine girildi")
+            if (!it.isNullOrEmpty()) {
+                println("Observer veriyi gözlemleri ve boş omadığından emin")
+                updatePopMenu(it)
+            }
+        }
+
+        viewModel.clothesList.observe(this) { it ->
+            println("clothes Observe içine girildi")
+            if(!it.isNullOrEmpty()) {
+                setUpRecyclerAdapter(it)
+            }
+        }
+    }
+
+    // RecyclerView
+    private fun setUpRecyclerAdapter(clothesList: List<Clothes>) {
+        // Recycler Adapter
+        recyclerAdapter = ClothesListRecyclerAdapter(clothesList)
+        val recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = recyclerAdapter
     }
 
     // Set blur view

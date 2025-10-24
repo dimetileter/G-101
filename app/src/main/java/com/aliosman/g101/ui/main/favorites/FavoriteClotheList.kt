@@ -35,10 +35,9 @@ class FavoriteClotheList : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Recycler adapter
-        val clothesList = getFavoriteClothes()
         val recyclerAdapter =  binding.recyclerView
         recyclerAdapter.layoutManager = LinearLayoutManager(requireContext())
-        recyclerAdapter.adapter = ClothesListRecyclerAdapter(clothesList)
+        recyclerAdapter.adapter = ClothesListRecyclerAdapter(emptyList())
 
     }
 

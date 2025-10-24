@@ -90,7 +90,6 @@ class MainActivity : AppCompatActivity() {
         blurViewNavBar.setupWith(blurTarget)
             .setFrameClearDrawable(windowBackground)
             .setBlurRadius(radius)
-
     }
 
     // Start AddPage Activity

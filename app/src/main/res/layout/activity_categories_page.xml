@@ -10,6 +10,20 @@
     android:background="@color/activity_background"
     tools:context=".ui.categories.CategoriesPageActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        />
+
+
     <!-- Blur Target -->
     <eightbitlab.com.blurview.BlurTarget
         android:id="@+id/blur_target"
@@ -157,13 +171,14 @@
                 app:navigationIcon="@drawable/ic_left_arrow"
                 app:menu="@menu/appbar_btn_categories_appbar_help">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/ic_category_icon"
-                    android:layout_width="@dimen/_48dp"
-                    android:layout_height="@dimen/_48dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_shoe"
-                    android:scaleType="center"/>
+                <!-- Veriler artık veri tabanından geldiği için kapatıldı -->
+<!--                <com.google.android.material.imageview.ShapeableImageView           -->
+<!--                    android:id="@+id/ic_category_icon"-->
+<!--                    android:layout_width="@dimen/_48dp"                             -->
+<!--                    android:layout_height="@dimen/_48dp"                            -->
+<!--                    android:layout_gravity="center"                                 -->
+<!--                    android:src="@drawable/ic_shoe"                                 -->
+<!--                    android:scaleType="center"/>                                    -->
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/txt_category_text"
